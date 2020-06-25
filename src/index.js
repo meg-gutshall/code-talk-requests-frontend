@@ -11,5 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
 function fetchRequests() {
   fetch(REQS_URL)
     .then(resp => resp.json())
-    .then(reqs => console.log(reqs))
+    .then(requests => requests.forEach(requestData => { 
+      newRequest = Request.new(requestData);
+      renderRequest(newRequest);
+    }))
 }
