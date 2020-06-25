@@ -5,5 +5,8 @@
   "scripts": {
     "dev": "parcel index.html",
     "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.0"
   }
 }
