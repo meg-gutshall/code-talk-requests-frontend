@@ -1,14 +1,35 @@
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import _ from 'lodash';
+import printMe from './print.js';
+
+const container = document.createElement('div');
+container.classList.add('container-fluid');
 
 function component() {
-  const element = document.createElement('div');
+  const row = document.createElement('div');
+  row.classList.add('row');
 
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+  const leftEl = document.createElement('div');
+  leftEl.classList.add('col-3');
+  leftEl.innerHTML = _.join(['Hello', 'webpack'], ' ');
 
-  return element;
+  const rightEl = document.createElement('div');
+  rightEl.classList.add('col-3');
+  const btn = document.createElement('button');
+  btn.classList.add('btn', 'btn-primary');
+  btn.innerHTML = 'Click me and check the console!';
+  btn.onclick = printMe;
+
+  row.appendChild(leftEl);
+  rightEl.appendChild(btn);
+  row.appendChild(rightEl);
+
+  return row;
 }
 
-document.body.appendChild(component());
+container.appendChild(component());
+document.body.appendChild(container);
 
 // PROJECT CODE BELOW -- DO NOT DELETE
 
