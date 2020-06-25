@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Glacial';
+  src: url('./glacial-indifference-regular.otf') format('otf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+.hello {
+  color: red;
+  font-family: 'Glacial';
+}
