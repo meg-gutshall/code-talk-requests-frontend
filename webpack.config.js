@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
@@ -12,18 +11,15 @@ module.exports = {
   devtool: 'eval-cheap-source-map',
   devServer: {
     contentBase: './dist',
-    // hot: true,
+    hot: true,
   },
   plugins: [
-    new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),
     new ManifestPlugin(),
-    new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       // inject: false,
       // template: require('html-webpack-template'),
-      title: 'Output Management',
+      title: 'Hot Module Replacement',
     }),
   ],
   output: {

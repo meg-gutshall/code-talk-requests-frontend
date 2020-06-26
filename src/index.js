@@ -1,5 +1,6 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles.css';
 import _ from 'lodash';
 import printMe from './print.js';
 
@@ -28,15 +29,18 @@ function component() {
   return row;
 }
 
-container.appendChild(component());
+let row = component();
+container.appendChild(row); // Store the element to re-render on print.js changes
 document.body.appendChild(container);
 
-// if (module.hot) {
-//   module.hot.accept('./print.js', function() {
-//     console.log('Accepting the updated printMe module!');
-//     printMe();
-//   })
-// }
+if (module.hot) {
+  module.hot.accept('./print.js', function() {
+    console.log('Accepting the updated printMe module!');
+    document.body.removeChild(row);
+    row = component();  // Re-render the "component" to update the click handler
+    document.body.appendChild(row);
+  })
+}
 
 // PROJECT CODE BELOW -- DO NOT DELETE
 
