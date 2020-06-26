@@ -33,14 +33,12 @@
     "express": "^4.17.1",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
+    "html-webpack-template": "^6.2.0",
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-manifest-plugin": "^2.2.0",
     "xml-loader": "^1.2.1"
-  },
-  "peerDependencies": {
-    "html-webpack-plugin": "^4.3.0"
   }
 }

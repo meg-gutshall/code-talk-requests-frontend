@@ -4,8 +4,7 @@ import './styles.css';
 import _ from 'lodash';
 import printMe from './print.js';
 
-const container = document.createElement('div');
-container.classList.add('container-fluid');
+const container = document.getElementById('main')
 
 function component() {
   const row = document.createElement('div');
@@ -31,14 +30,13 @@ function component() {
 
 let row = component();
 container.appendChild(row); // Store the element to re-render on print.js changes
-document.body.appendChild(container);
 
 if (module.hot) {
   module.hot.accept('./print.js', function() {
     console.log('Accepting the updated printMe module!');
-    document.body.removeChild(row);
+    container.removeChild(row);
     row = component();  // Re-render the "component" to update the click handler
-    document.body.appendChild(row);
+    container.appendChild(row);
   })
 }
 
