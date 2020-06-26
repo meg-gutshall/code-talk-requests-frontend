@@ -31,6 +31,13 @@ function component() {
 container.appendChild(component());
 document.body.appendChild(container);
 
+// if (module.hot) {
+//   module.hot.accept('./print.js', function() {
+//     console.log('Accepting the updated printMe module!');
+//     printMe();
+//   })
+// }
+
 // PROJECT CODE BELOW -- DO NOT DELETE
 
 // const REQS_URL = "http://localhost:3000/api/v1/requests"
