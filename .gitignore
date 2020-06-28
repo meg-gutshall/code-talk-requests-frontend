@@ -9,4 +9,4 @@ node_modules
 
 # Ignore log files and cache
 .cache
-
+dist

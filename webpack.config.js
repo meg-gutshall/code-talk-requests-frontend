@@ -6,7 +6,8 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    app: './src/index.js',
+    index: './src/index.js',
+    another: './src/another-module.js',
   },
   devtool: 'eval-cheap-source-map',
   devServer: {
@@ -18,7 +19,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       // https://github.com/jantimon/html-webpack-plugin#options
-      title: 'HTML Webpack Custom Template',
+      title: 'Split Chunks Plugin',
       template: 'template.html',
       scriptLoading: 'defer',
       meta: {
@@ -30,6 +31,11 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
   },
   module: {
     rules: [
