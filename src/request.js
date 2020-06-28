@@ -1,12 +1,13 @@
 class Request {
   constructor(requestData) {
-    this.topic = requestData.topic;
-    this.module = requestData.module;
-    this.description = requestData.description;
-    this.student_id = requestData.student_id;
+    this.topic = requestData.attributes.topic;
+    this.module = requestData.attributes.module;
+    this.description = requestData.attributes.description;
+    this.student_id = requestData.attributes.student_id;
+    Request.all.push(this);
   }
 
-  renderRequest(request) {
+  renderRequest() {
     return `
       <div class="card-body">
         <h3 class="card-title">${this.topic}</h3>
@@ -21,4 +22,6 @@ class Request {
 
 }
 
-Request.allRequests = [];
+Request.all = [];
+
+export default Request
