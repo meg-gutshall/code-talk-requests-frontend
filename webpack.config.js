@@ -11,7 +11,7 @@ module.exports = {
   devtool: 'eval-cheap-source-map',
   devServer: {
     contentBase: './dist',
-    hot: true,
+    // hot: true,
   },
   plugins: [
     new ManifestPlugin(),
