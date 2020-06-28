@@ -7,7 +7,6 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    another: './src/another-module.js',
   },
   devtool: 'eval-cheap-source-map',
   devServer: {
@@ -19,7 +18,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       // https://github.com/jantimon/html-webpack-plugin#options
-      title: 'Split Chunks Plugin',
+      title: 'Dynamic Imports',
       template: 'template.html',
       scriptLoading: 'defer',
       meta: {
@@ -30,12 +29,8 @@ module.exports = {
   ],
   output: {
     filename: '[name].bundle.js',
+    chunkFilename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
-  },
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-    },
   },
   module: {
     rules: [

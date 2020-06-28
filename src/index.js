@@ -6,30 +6,34 @@ import printMe from './print.js';
 
 const container = document.getElementById('main')
 
-function component() {
-  const row = document.createElement('div');
-  row.classList.add('row');
-
-  const leftEl = document.createElement('div');
-  leftEl.classList.add('col-3');
-  leftEl.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
-  const rightEl = document.createElement('div');
-  rightEl.classList.add('col-3');
-  const btn = document.createElement('button');
-  btn.classList.add('btn', 'btn-primary');
-  btn.innerHTML = 'Click me and check the console!';
-  btn.onclick = printMe;
-
-  row.appendChild(leftEl);
-  rightEl.appendChild(btn);
-  row.appendChild(rightEl);
-
-  return row;
+function getComponent() {
+  return import(/* webpackChunkName: "lodash" */'lodash').then(({ default: _ }) => {    
+    const row = document.createElement('div');
+    row.classList.add('row');
+  
+    const leftEl = document.createElement('div');
+    leftEl.classList.add('col-3');
+    leftEl.innerHTML = _.join(['Hello', 'webpack'], ' ');
+  
+    const rightEl = document.createElement('div');
+    rightEl.classList.add('col-3');
+    const btn = document.createElement('button');
+    btn.classList.add('btn', 'btn-primary');
+    btn.innerHTML = 'Click me and check the console!';
+    btn.onclick = printMe;
+  
+    row.appendChild(leftEl);
+    rightEl.appendChild(btn);
+    row.appendChild(rightEl);
+  
+    return row;
+  }).catch(error => 'An error occurred while loading the component.');
 }
 
-let row = component();
-container.appendChild(row); // Store the element to re-render on print.js changes
+getComponent().then(component => {
+  let row = component();
+  container.appendChild(row); // Store the element to re-render on print.js changes
+})
 
 if (module.hot) {
   module.hot.accept('./print.js', function() {
