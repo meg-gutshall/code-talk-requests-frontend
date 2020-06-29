@@ -23,14 +23,16 @@ class TopicRequest {
 
   renderTopicRequest() {
     return `
-      <div class="card" data-id=${this.id}>
-        <div class="card-body">
-          <h3 class="card-title">${this.topic}</h3>
-          <h4 class="card-subtitle mb-2 text-muted">${this.module}</h4>
-          <p class="card-text">${this.description}</p>
-        </div>
-        <div class="card-body">
-          <a href="#" class="card-link">Card link</a>
+      <div class="col mb-4">
+        <div class="card" data-id=${this.id}>
+          <div class="card-body">
+            <h3 class="card-title">${this.topic}</h3>
+            <p class="card-subtitle"><small class="text-muted">${this.module}</small></p>
+            <p class="card-text">${this.description}</p>
+          </div>
+          <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+          </div>
         </div>
       </div>
     `
@@ -40,4 +42,4 @@ class TopicRequest {
 
 TopicRequest.all = [];
 
-export {TopicRequest};
+export { TopicRequest };
