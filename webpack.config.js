@@ -5,20 +5,23 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: {
-    index: './src/index.js',
+  entry: './src/index.js',
+  output: {
+    filename: '[name].bundle.js',
+    chunkFilename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
   },
   devtool: 'eval-cheap-source-map',
   devServer: {
     contentBase: './dist',
-    // hot: true,
+    hot: true,
   },
   plugins: [
     new ManifestPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       // https://github.com/jantimon/html-webpack-plugin#options
-      title: 'Dynamic Imports',
+      title: 'Flatiron Study Group Central',
       template: 'template.html',
       scriptLoading: 'defer',
       meta: {
@@ -27,11 +30,6 @@ module.exports = {
       },
     }),
   ],
-  output: {
-    filename: '[name].bundle.js',
-    chunkFilename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-  },
   module: {
     rules: [
       {
