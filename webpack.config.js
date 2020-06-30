@@ -14,13 +14,11 @@ module.exports = {
   devtool: 'eval-cheap-source-map',
   devServer: {
     contentBase: './dist',
-    hot: true,
   },
   plugins: [
     new ManifestPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      // https://github.com/jantimon/html-webpack-plugin#options
       title: 'Flatiron Study Group Central',
       template: 'template.html',
       scriptLoading: 'defer',
