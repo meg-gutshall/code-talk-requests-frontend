@@ -4,21 +4,9 @@ class TopicRequest {
     this.topic = topicRequestData.attributes.topic;
     this.module = topicRequestData.attributes.module;
     this.description = topicRequestData.attributes.description;
+    this.upvotes = topicRequestData.attributes.upvotes;
     this.student_id = topicRequestData.attributes.student_id;
     TopicRequest.all.push(this);
-  }
-
-  static findTopicRequest(id) {
-    return this.all.find((topicRequest) => topicRequest.id === id)
-  }
-
-  static updateTopicRequest(topicRequestData) {
-    const topicRequest = this.findTopicRequest(topicRequestData.id);
-    topicRequest.topic = topicRequestData.topic;
-    topicRequest.module = topicRequestData.module;
-    topicRequest.description = topicRequestData.description;
-    topicRequest.student_id = topicRequestData.student_id;
-    return topicRequest;
   }
 
   renderTopicRequest() {
@@ -30,12 +18,26 @@ class TopicRequest {
             <p class="card-subtitle"><small class="text-muted">${this.module}</small></p>
             <p class="card-text">${this.description}</p>
           </div>
-          <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
+          <div class="card-body text-right">
+          <p class="card-text"><a href="#" class="card-link">^</a> ${this.upvotes}</p>
           </div>
         </div>
       </div>
     `
+  }
+
+  static findTopicRequest(id) {
+    return this.all.find((topicRequest) => topicRequest.id === id)
+  }
+
+  static updateTopicRequest(topicRequestData) {
+    const topicRequest = this.findTopicRequest(topicRequestData.id);
+    topicRequest.topic = topicRequestData.topic;
+    topicRequest.module = topicRequestData.module;
+    topicRequest.description = topicRequestData.description;
+    topicRequest.upvotes = topicRequestData.upvotes;
+    topicRequest.student_id = topicRequestData.student_id;
+    return topicRequest;
   }
 
 }

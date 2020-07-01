@@ -4,6 +4,8 @@ class DOMElements {
   constructor(that) {
     this.that = that;
   }
+  
+  // const MODS = ["Git & GitHub", "Intro to Ruby", "HTML & CSS", "Procedural Ruby", "Object-Oriented Ruby", "SQL", "ORMs & ActiveRecord", "Rack", "Sinatra", "Rails", "JavaScript", "React", "Redux", "Other"]
 
   static get navMenu() { return document.getElementById('navbarToggler') }
   static get mainBody() { return document.getElementById('container') }
