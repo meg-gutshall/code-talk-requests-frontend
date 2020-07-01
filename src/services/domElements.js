@@ -1,6 +1,6 @@
 const main = document.getElementById('main');
 
-class DOMElement {
+class DOMElements {
   constructor(that) {
     this.that = that;
   }
@@ -20,4 +20,4 @@ class DOMElement {
 
 }
 
-export { DOMElement };
+export { DOMElements };
