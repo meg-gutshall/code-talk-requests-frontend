@@ -26,6 +26,8 @@ class TopicRequest {
     `
   }
 
+  // Add code to scope to each module in the topic_request index page
+
   static findTopicRequest(id) {
     return this.all.find((topicRequest) => topicRequest.id === id)
   }

@@ -1,4 +1,5 @@
 const main = document.getElementById('main');
+// Look at self-referential class variable: https://schanrai.github.io/self-referential_class_variables_in_oojs_applications
 
 class DOMElements {
   constructor(that) {
