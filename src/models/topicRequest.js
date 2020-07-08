@@ -5,7 +5,7 @@ class TopicRequest {
     this.module = topicRequestData.attributes.module;
     this.description = topicRequestData.attributes.description;
     this.upvotes = topicRequestData.attributes.upvotes;
-    this.student_id = topicRequestData.attributes.student_id;
+    this.studentId = topicRequestData.attributes.student_id;
     TopicRequest.all.push(this);
   }
 
@@ -34,11 +34,11 @@ class TopicRequest {
 
   static updateTopicRequest(topicRequestData) {
     const topicRequest = this.findTopicRequest(topicRequestData.id);
-    topicRequest.topic = topicRequestData.topic;
-    topicRequest.module = topicRequestData.module;
-    topicRequest.description = topicRequestData.description;
-    topicRequest.upvotes = topicRequestData.upvotes;
-    topicRequest.student_id = topicRequestData.student_id;
+    topicRequest.topic = topicRequestData.attributes.topic;
+    topicRequest.module = topicRequestData.attributes.module;
+    topicRequest.description = topicRequestData.attributes.description;
+    topicRequest.upvotes = topicRequestData.attributes.upvotes;
+    topicRequest.studentId = topicRequestData.attributes.student_id;
     return topicRequest;
   }
 
