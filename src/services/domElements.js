@@ -9,6 +9,8 @@ class DOMElements {
   static get mainBody() { return document.getElementById('container') }
   static get footerBody() { return document.getElementById('footer-body') }
 
+  static createLoginFormContainer() {
+    return this.mainBody.innerHTML += `<div class="row row-cols-1" id="login-form-container"></div>`;
   static createTopicRequestIndexContainer() {
     this.mainBody.innerHTML += `<div class="row row-cols-1 row-cols-lg-3" id="topic-request-index"></div>`;
   }

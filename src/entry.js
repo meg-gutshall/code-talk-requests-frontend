@@ -7,7 +7,7 @@ const REQS_URL = "http://localhost:3000/api/v1/topic_requests"
 document.addEventListener('DOMContentLoaded', () => {
   console.log("Loaded!!")
 
-  fetchTopicRequests()
+  // fetchTopicRequests()
 });
 
 function fetchTopicRequests() {
