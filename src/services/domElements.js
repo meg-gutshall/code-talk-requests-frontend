@@ -12,10 +12,11 @@ class DOMElements {
   static createTopicRequestIndex() {
     this.mainBody.innerHTML += `<div class="row row-cols-1 row-cols-lg-3" id="index"></div>`;
   }
+  createTopicRequestIndexContainer = () => mainBody.innerHTML += `<div class="row row-cols-1 row-cols-lg-3" id="topic-request-index"></div>`;
 
-  static get topicIndex() {
-    this.createTopicRequestIndex();
-    return document.getElementById('index');
+  static get topicRequestIndexContainer() {
+    this.createTopicRequestIndexContainer();
+    return document.getElementById('topic-request-index');
   }
 
 }

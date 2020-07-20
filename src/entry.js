@@ -15,6 +15,6 @@ function fetchTopicRequests() {
     .then(resp => resp.json())
     .then(topicRequests => topicRequests.data.forEach(topicRequestData => {
       const newTopicRequest = new TopicRequest(topicRequestData);
-      DOMElements.topicIndex.innerHTML += newTopicRequest.renderTopicRequest();
+      DOMElements.topicRequestIndexContainer.innerHTML += newTopicRequest.renderTopicRequest();
     }))
 }
