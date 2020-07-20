@@ -1,4 +1,5 @@
-import './main.scss';
+import './assets/main.scss';
+import 'bootstrap/dist/js/bootstrap';
 import { TopicRequest} from './models/topicRequest';
 import { DOMElements } from './services/domElements';
 
@@ -8,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log("Loaded!!")
 
   // fetchTopicRequests()
+  DOMElements.loginForm;
 });
 
 function fetchTopicRequests() {
