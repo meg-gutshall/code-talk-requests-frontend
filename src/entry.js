@@ -1,6 +1,4 @@
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles.css';
+import './main.scss';
 import { TopicRequest} from './models/topicRequest';
 import { DOMElements } from './services/domElements';
 
