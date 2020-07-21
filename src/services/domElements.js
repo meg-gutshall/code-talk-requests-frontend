@@ -10,7 +10,7 @@ class DOMElements {
   static get footerBody() { return document.getElementById('footer-body') }
 
   static createLoginFormContainer() {
-    this.mainBody.innerHTML += `<div class="row"><div class="col" id="login-form-container"></div></div>`;
+    this.mainBody.innerHTML = `<div class="row"><div class="col" id="login-form-container"></div></div>`;
   }
 
   static get loginFormContainer() {
@@ -20,7 +20,7 @@ class DOMElements {
 
   static createLoginForm() {
     const loginForm = 
-      `<form class="mt-5">
+      `<form class="mt-5" id="login-form">
         <div class="form-row justify-content-center">
           <div class="col-9 text-center mb-2">
             <h1>Welcome back to Flatiron School's online learning platform!</h1>
@@ -51,7 +51,7 @@ class DOMElements {
         </div>
         <div class="form-row justify-content-center">
           <div class="col-6">
-            <input type="password" class="form-control" name="user-password" id="password" required="required">
+            <input type="password" class="form-control" name="password" id="user-password" required="required">
           </div>
         </div>
         <div class="form-row justify-content-center">
@@ -73,7 +73,7 @@ class DOMElements {
   }
 
   static createTopicRequestIndexContainer() {
-    this.mainBody.innerHTML += `<div class="row row-cols-1 row-cols-lg-3" id="topic-request-index"></div>`;
+    this.mainBody.innerHTML += `<div class="row row-cols-1 row-cols-lg-3 mt-2" id="topic-request-index"></div>`;
   }
   
   static get topicRequestIndexContainer() {
