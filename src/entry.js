@@ -11,22 +11,10 @@ const LOGIN_URL = `${BASE_URL}login`
 document.addEventListener('DOMContentLoaded', () => {
   console.log("Loaded!!")
   
-
-
   DOMElements.loginForm;
   let loginForm = document.getElementById('login-form');
   loginForm.addEventListener('submit', e => loginFormHandler(e));
 });
-
-// function fetchConstants() {
-  // const jwtGetFetchOptions = {
-  //   method: 'GET',
-  //   headers: {Authorization: `Bearer ${localStorage.getItem('jwt_token')}`}
-  // };
-//   const BASE_URL = "http://localhost:3000/api/v1/"
-//   const REQS_URL = `${BASE_URL}topic_requests`
-//   const LOGIN_URL = `${BASE_URL}login`
-// }
 
 function fetchTopicRequests(url) {
   const jwtGetFetchOptions = {
