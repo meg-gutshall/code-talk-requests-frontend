@@ -17,7 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function fetchTopicRequests(url) {
-  fetch(url)
+  const jwtGetFetchOptions = {
+    method: 'GET',
+    headers: {Authorization: `Bearer ${localStorage.getItem('jwt_token')}`}
+  };
+  fetch(url, jwtGetFetchOptions)
     .then(resp => resp.json())
     .then(topicRequests => topicRequests.data.forEach(topicRequestData => {
       const newTopicRequest = new TopicRequest(topicRequestData);
