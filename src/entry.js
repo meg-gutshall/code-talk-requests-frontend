@@ -37,12 +37,10 @@ function loginFormFetch(email_address, password) {
     method: 'POST',
     headers: { 
       'Content-Type': 'application/json',
-      'Accept': 'application/json',
-      'Origin': 'localhost:8080',
-      'Host': 'localhost:3000'
+      'Accept': 'application/json'
     },
     referrerPolicy: 'no-referrer',
-    body: JSON.stringify({ email_address, password })
+    body: JSON.stringify({ user: { email_address, password }})
   };
   fetch(LOGIN_URL, newLoginSubmission)
   .then(response => response.json())
