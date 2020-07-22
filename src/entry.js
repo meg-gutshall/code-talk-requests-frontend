@@ -1,7 +1,8 @@
 import './assets/main.scss';
 import 'bootstrap/dist/js/bootstrap';
-import { TopicRequest} from './models/topicRequest';
 import { DOMElements } from './services/domElements';
+import { TopicRequest } from './models/topicRequest';
+import { User } from './models/user';
 
 const BASE_URL = "http://localhost:3000/api/v1/"
 const REQS_URL = `${BASE_URL}topic_requests`
