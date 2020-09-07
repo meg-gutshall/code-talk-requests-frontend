@@ -10,11 +10,16 @@ const LOGIN_URL = `${BASE_URL}login`
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log("Loaded!!")
-  
-  DOMElements.loginForm;
-  let loginForm = document.getElementById('login-form');
-  loginForm.addEventListener('submit', e => loginFormHandler(e));
+  showLoginForm()
 });
+
+function showLoginForm() {
+  if (!localStorage.jwt) {
+    DOMElements.loginForm;
+    let loginForm = document.getElementById('login-form');
+    loginForm.addEventListener('submit', e => loginFormHandler(e));
+  }
+}
 
 function fetchTopicRequests(url) {
   const jwtGetFetchOptions = {
