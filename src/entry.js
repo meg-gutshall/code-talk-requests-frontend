@@ -10,28 +10,16 @@ const LOGIN_URL = `${BASE_URL}login`
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log("Loaded!!")
-  showLoginForm()
+  if (localStorage.jwt_token === undefined) {
+    showLoginForm()
+  }
+  fetchTopicRequests(REQS_URL);
 });
 
 function showLoginForm() {
-  if (!localStorage.jwt) {
     DOMElements.loginForm;
     let loginForm = document.getElementById('login-form');
     loginForm.addEventListener('submit', e => loginFormHandler(e));
-  }
-}
-
-function fetchTopicRequests(url) {
-  const jwtGetFetchOptions = {
-    method: 'GET',
-    headers: {Authorization: `Bearer ${localStorage.getItem('jwt_token')}`}
-  };
-  fetch(url, jwtGetFetchOptions)
-    .then(resp => resp.json())
-    .then(topicRequests => topicRequests.data.forEach(topicRequestData => {
-      const newTopicRequest = new TopicRequest(topicRequestData);
-      DOMElements.topicRequestIndexContainer.innerHTML += newTopicRequest.renderTopicRequest();
-    }))
 }
 
 function loginFormHandler(e) {
@@ -56,6 +44,18 @@ function loginFormFetch(email_address, password) {
   .then(userData => {
     localStorage.setItem('jwt_token', userData.jwt)
     DOMElements.mainBody.innerHTML = "";
-    fetchTopicRequests(REQS_URL);
   })
+}
+
+function fetchTopicRequests(url) {
+  const jwtGetFetchOptions = {
+    method: 'GET',
+    headers: {Authorization: `Bearer ${localStorage.getItem('jwt_token')}`}
+  };
+  fetch(url, jwtGetFetchOptions)
+    .then(resp => resp.json())
+    .then(topicRequests => topicRequests.data.forEach(topicRequestData => {
+      const newTopicRequest = new TopicRequest(topicRequestData);
+      DOMElements.topicRequestIndexContainer.innerHTML += newTopicRequest.renderTopicRequest();
+    }))
 }
