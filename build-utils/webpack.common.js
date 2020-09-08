@@ -56,7 +56,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new ManifestPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Flatiron Study Group Central',
+      title: 'Code Talk Requests',
       template: 'template.html',
       scriptLoading: 'defer',
       meta: {

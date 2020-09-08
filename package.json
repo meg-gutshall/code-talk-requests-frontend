@@ -1,5 +1,5 @@
 {
-  "name": "fi_study_group_central_frontend",
+  "name": "code-talk-requests-frontend",
   "version": "1.0.0",
   "description": "Rails/JS project for Flatiron School",
   "private": "true",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/meg-gutshall/fi_study_group_central_frontend.git"
+    "url": "git+https://github.com/meg-gutshall/code-talk-requests-frontend.git"
   },
   "keywords": [],
   "author": "Meg Gutshall",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/meg-gutshall/fi_study_group_central_frontend/issues"
+    "url": "https://github.com/meg-gutshall/code-talk-requests-frontend/issues"
   },
-  "homepage": "https://github.com/meg-gutshall/fi_study_group_central_frontend#readme",
+  "homepage": "https://github.com/meg-gutshall/code-talk-requests-frontend#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
     "bootstrap": "^4.5.0",
