@@ -2,8 +2,6 @@ class DOMElements {
   constructor() {
     DOMElements.newElement = undefined;
   }
-  
-  // const MODS = ["Git & GitHub", "Intro to Ruby", "HTML & CSS", "Procedural Ruby", "Object-Oriented Ruby", "SQL", "ORMs & ActiveRecord", "Rack", "Sinatra", "Rails", "JavaScript", "React", "Redux", "Other"]
 
   static get navMenu() { return document.getElementById('navbarToggler') }
   static get mainBody() { return document.getElementById('main-container') }
@@ -23,12 +21,12 @@ class DOMElements {
       `<form class="mt-5" id="login-form">
         <div class="form-row justify-content-center">
           <div class="col-9 text-center mb-2">
-            <h1>Welcome back to Flatiron School's online learning platform!</h1>
+            <h1>Welcome to the Code Talk online learning platform!</h1>
           </div>
         </div>
         <div class="form-row justify-content-center">
           <div class="col-9 text-center mb-4">
-            <p>Please sign into your account to continue learning.</p>
+            <p>Please sign in to continue your learning journey!</p>
           </div>
         </div>
         <div class="form-row justify-content-center">
