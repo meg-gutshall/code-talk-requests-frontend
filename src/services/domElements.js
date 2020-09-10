@@ -70,13 +70,22 @@ class DOMElements {
     return this.createLoginForm();
   }
 
-  static createTopicRequestIndexContainer() {
-    this.mainBody.innerHTML += `<div class="row row-cols-1 row-cols-lg-3 mt-2" id="topic-request-index"></div>`;
+  static createUserTopicRequestsContainer() {
+    this.mainBody.innerHTML += `<div class="row row-cols-1 row-cols-lg-3 mt-2" id="user-topic-requests"></div>`;
   }
   
-  static get topicRequestIndexContainer() {
-    this.createTopicRequestIndexContainer();
-    return document.getElementById('topic-request-index');
+  static get userTopicRequestsContainer() {
+    this.createUserTopicRequestsContainer();
+    return document.getElementById('user-topic-requests');
+  }
+
+  static createAllOtherTopicRequestsContainer() {
+    this.mainBody.innerHTML += `<div class="row row-cols-1 row-cols-lg-3 mt-2" id="all-other-topic-requests"></div>`;
+  }
+  
+  static get allOtherTopicRequestsContainer() {
+    this.createAllOtherTopicRequestsContainer();
+    return document.getElementById('all-other-topic-requests');
   }
 
 }

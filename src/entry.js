@@ -57,5 +57,14 @@ function fetchTopicRequests(url) {
     .then(topicRequests => topicRequests.data.forEach(topicRequest => {
       const newTopicRequest = new TopicRequest(topicRequest, topicRequest.attributes);
       console.log("fetchTopicRequests -> newTopicRequest", newTopicRequest)
+      DOMElements.userTopicRequestsContainer.innerHTML += newTopicRequest.renderTopicRequest();
     }))
-}
+  }
+  
+  function renderUserTopicRequests() {
+    DOMElements.userTopicRequestsContainer.innerHTML += newTopicRequest.renderTopicRequest();
+  }
+  
+  function renderAllOtherTopicRequests() {
+    DOMElements.allOtherTopicRequestsContainer.innerHTML += newTopicRequest.renderTopicRequest();
+  }
