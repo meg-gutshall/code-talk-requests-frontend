@@ -54,8 +54,8 @@ function fetchTopicRequests(url) {
   };
   fetch(url, jwtGetFetchOptions)
     .then(resp => resp.json())
-    .then(topicRequests => topicRequests.data.forEach(topicRequestData => {
-      const newTopicRequest = new TopicRequest(topicRequestData);
-      DOMElements.topicRequestIndexContainer.innerHTML += newTopicRequest.renderTopicRequest();
+    .then(topicRequests => topicRequests.data.forEach(topicRequest => {
+      const newTopicRequest = new TopicRequest(topicRequest, topicRequest.attributes);
+      console.log("fetchTopicRequests -> newTopicRequest", newTopicRequest)
     }))
 }
