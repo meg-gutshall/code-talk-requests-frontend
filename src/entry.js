@@ -44,6 +44,7 @@ function loginFormFetch(email_address, password) {
   .then(response => response.json())
   .then(userData => {
     localStorage.setItem('jwt_token', userData.jwt);
+    // To logout, set jwt_token to undefined
     localStorage.setItem('current_user', userData.user.data.id);
     DOMElements.mainBody.innerHTML = "";
   })
