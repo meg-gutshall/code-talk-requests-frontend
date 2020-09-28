@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (localStorage.jwt_token === undefined) {
     showLoginForm()
   }
+  // Isn't asynchronous -- need to have below wait until the user is logged in ALL the way
   fetchTopicRequests(REQS_URL);
 });
 
@@ -42,7 +43,9 @@ function loginFormFetch(email_address, password) {
   fetch(LOGIN_URL, newLoginSubmission)
   .then(response => response.json())
   .then(userData => {
-    localStorage.setItem('jwt_token', userData.jwt)
+    localStorage.setItem('jwt_token', userData.jwt);
+    // To logout, set jwt_token to undefined
+    localStorage.setItem('current_user', userData.user.data.id);
     DOMElements.mainBody.innerHTML = "";
   })
 }
@@ -54,8 +57,17 @@ function fetchTopicRequests(url) {
   };
   fetch(url, jwtGetFetchOptions)
     .then(resp => resp.json())
-    .then(topicRequests => topicRequests.data.forEach(topicRequestData => {
-      const newTopicRequest = new TopicRequest(topicRequestData);
-      DOMElements.topicRequestIndexContainer.innerHTML += newTopicRequest.renderTopicRequest();
+    .then(topicRequests => topicRequests.data.forEach(topicRequest => {
+      const newTopicRequest = new TopicRequest(topicRequest, topicRequest.attributes);
+      console.log("fetchTopicRequests -> newTopicRequest", newTopicRequest)
+      DOMElements.userTopicRequestsContainer.innerHTML += newTopicRequest.renderTopicRequest();
     }))
-}
+  }
+  
+  function renderUserTopicRequests() {
+    DOMElements.userTopicRequestsContainer.innerHTML += newTopicRequest.renderTopicRequest();
+  }
+  
+  function renderAllOtherTopicRequests() {
+    DOMElements.allOtherTopicRequestsContainer.innerHTML += newTopicRequest.renderTopicRequest();
+  }
