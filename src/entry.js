@@ -14,14 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Show the login form
-function showLoginForm() {
+async function showLoginForm() {
   DOMElements.loginForm;
   let loginForm = document.getElementById('login-form');
   loginForm.addEventListener('submit', e => loginFormHandler(e));
 }
 
 // Transfer the form data on submittal
-function loginFormHandler(e) {
+async function loginFormHandler(e) {
   e.preventDefault();
   const emailInput = e.target.querySelector('#user-email').value;
   const passwordInput = e.target.querySelector('#user-password').value;
@@ -63,8 +63,11 @@ async function isLoggedIn() {
 async function autoRedirect() {
   const validLogin = await isLoggedIn();
   if (validLogin) {
-  // https://zellwk.com/blog/frontend-login-system/
+    const topicRequests = await fetchTopicRequests(REQS_URL);
+    return topicRequests;
   } else {
+    const loginForm = await showLoginForm();
+    return loginForm;
   }
 }
 
@@ -74,18 +77,18 @@ function logout() {
   localStorage.removeItem('current_user');
 }
 
-function fetchTopicRequests(url) {
+async function fetchTopicRequests(url) {
   const jwtGetFetchOptions = {
     method: 'GET',
     headers: {Authorization: `Bearer ${localStorage.getItem('jwt_token')}`}
   };
-  fetch(url, jwtGetFetchOptions)
-    .then(resp => resp.json())
-    .then(topicRequests => topicRequests.data.forEach(topicRequest => {
-      const newTopicRequest = new TopicRequest(topicRequest, topicRequest.attributes);
-      DOMElements.userTopicRequestsContainer.innerHTML += newTopicRequest.renderTopicRequest();
-    }))
-  }
+  const resp = await fetch(url, jwtGetFetchOptions);
+  const topicRequests = await resp.json();
+  topicRequests.data.forEach(topicRequest => {
+    const newTopicRequest = new TopicRequest(topicRequest, topicRequest.attributes);
+    DOMElements.userTopicRequestsContainer.innerHTML += newTopicRequest.renderTopicRequest();
+  })
+}
   
   function renderUserTopicRequests() {
     DOMElements.userTopicRequestsContainer.innerHTML += newTopicRequest.renderTopicRequest();
