@@ -9,11 +9,8 @@ const REQS_URL = `${BASE_URL}topic_requests`
 const LOGIN_URL = `${BASE_URL}login`
 
 document.addEventListener('DOMContentLoaded', () => {
-  if (localStorage.jwt_token === undefined) {
-    showLoginForm()
-  }
-  // Isn't asynchronous -- need to have below wait until the user is logged in ALL the way
-  fetchTopicRequests(REQS_URL);
+  autoRedirect()
+  // Isn't asynchronous -- need to wait until the user is logged in ALL the way to render the topic requests
 });
 
 // Show the login form
@@ -30,6 +27,9 @@ function loginFormHandler(e) {
   const passwordInput = e.target.querySelector('#user-password').value;
   loginAction(emailInput, passwordInput);
 }
+
+// Auth help article
+// https://zellwk.com/blog/frontend-login-system/
 
 // Login
 async function loginAction(email_address, password) {
@@ -51,15 +51,21 @@ async function loginAction(email_address, password) {
 
 // Check if user is logged in
 async function isLoggedIn() {
-  let token = store.get('jwt_token');
-  if (!token) return false
+  let token = localStorage.getItem('jwt_token');
+  if (!token) {
+    return false
+  } else {
+    return true
+  }
 }
 
 // Redirect user depending on login status
 async function autoRedirect() {
   const validLogin = await isLoggedIn();
-  // Figure out what to put here for an SPA
+  if (validLogin) {
   // https://zellwk.com/blog/frontend-login-system/
+  } else {
+  }
 }
 
 // Logout
