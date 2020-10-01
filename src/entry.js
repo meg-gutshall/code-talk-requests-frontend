@@ -9,7 +9,12 @@ const REQS_URL = `${BASE_URL}topic_requests`
 const LOGIN_URL = `${BASE_URL}login`
 
 document.addEventListener('DOMContentLoaded', () => {
-  autoRedirect()
+  // PSEUDOCODE
+  // Check to see if user is logged in
+    // if yes, show topic requests
+    // if no, show login form
+
+  autoRedirect();
   // Isn't asynchronous -- need to wait until the user is logged in ALL the way to render the topic requests
 });
 
@@ -25,14 +30,16 @@ async function loginFormHandler(e) {
   e.preventDefault();
   const emailInput = e.target.querySelector('#user-email').value;
   const passwordInput = e.target.querySelector('#user-password').value;
-  loginAction(emailInput, passwordInput);
+  await login(emailInput, passwordInput);
+  autoRedirect();
+  // Check here for CORRECT login credentials by calling autoRedirect again
 }
 
 // Auth help article
 // https://zellwk.com/blog/frontend-login-system/
 
 // Login
-async function loginAction(email_address, password) {
+async function login(email_address, password) {
   const newLoginSubmission = {
     method: 'POST',
     headers: { 
@@ -63,16 +70,14 @@ async function isLoggedIn() {
 async function autoRedirect() {
   const validLogin = await isLoggedIn();
   if (validLogin) {
-    const topicRequests = await fetchTopicRequests(REQS_URL);
-    return topicRequests;
+    fetchTopicRequests(REQS_URL);
   } else {
-    const loginForm = await showLoginForm();
-    return loginForm;
+    showLoginForm();
   }
 }
 
 // Logout
-function logout() {
+function logoutAction() {
   localStorage.removeItem('jwt_token');
   localStorage.removeItem('current_user');
 }
@@ -90,10 +95,10 @@ async function fetchTopicRequests(url) {
   })
 }
   
-  function renderUserTopicRequests() {
-    DOMElements.userTopicRequestsContainer.innerHTML += newTopicRequest.renderTopicRequest();
-  }
-  
-  function renderAllOtherTopicRequests() {
-    DOMElements.allOtherTopicRequestsContainer.innerHTML += newTopicRequest.renderTopicRequest();
-  }
+function renderUserTopicRequests() {
+  DOMElements.userTopicRequestsContainer.innerHTML += newTopicRequest.renderTopicRequest();
+}
+
+function renderAllOtherTopicRequests() {
+  DOMElements.allOtherTopicRequestsContainer.innerHTML += newTopicRequest.renderTopicRequest();
+}
