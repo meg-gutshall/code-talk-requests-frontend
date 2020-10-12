@@ -8,17 +8,15 @@ class TopicRequest {
     TopicRequest.all.push(this);
   }
 
-  renderTopicRequest() {
+  createTopicRequestCard() {
     return `
-      <div class="col mb-4">
-        <div class="card" data-id=${this.id}>
-          <div class="card-body">
-            <h3 class="card-title">${this.topic}</h3>
-            <p class="card-text">${this.description}</p>
-          </div>
-          <div class="card-body text-right">
-          <p class="card-text"><a href="#" class="card-link">^</a> ${this.upvotes}</p>
-          </div>
+      <div class="card h-100" data-id=${this.id}>
+        <div class="card-body">
+          <h3 class="card-title">${this.topic}</h3>
+          <p class="card-text">${this.description}</p>
+        </div>
+        <div class="card-body text-right">
+        <p class="card-text"><a href="#" class="card-link">^</a> ${this.upvotes}</p>
         </div>
       </div>
     `
