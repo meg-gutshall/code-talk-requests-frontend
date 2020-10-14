@@ -7,6 +7,9 @@ class DOMElements {
   static get mainBody() { return document.getElementById('main-container') }
   static get footerBody() { return document.getElementById('footer-body') }
 
+
+  // ---------> Begin login elements
+
   static createLoginFormContainer() {
     this.mainBody.innerHTML = `<div class="row"><div class="col" id="login-form-container"></div></div>`;
   }
@@ -70,8 +73,11 @@ class DOMElements {
     return this.createLoginForm();
   }
 
-  static createUserTopicRequestsContainer() {
+  // ---------> End login elements
     this.mainBody.innerHTML += `<div class="row row-cols-1 row-cols-lg-3 mt-2" id="user-topic-requests"></div>`;
+
+
+  // ---------> Start topic request elements
   }
   
   static get userTopicRequestsContainer() {
@@ -87,6 +93,8 @@ class DOMElements {
     this.createAllOtherTopicRequestsContainer();
     return document.getElementById('all-other-topic-requests');
   }
+
+  // ---------> End topic request elements
 
 }
 
