@@ -74,19 +74,28 @@ class DOMElements {
   }
 
   // ---------> End login elements
-    this.mainBody.innerHTML += `<div class="row row-cols-1 row-cols-lg-3 mt-2" id="user-topic-requests"></div>`;
 
 
   // ---------> Start topic request elements
+
+  static createUserRow() {
+    this.mainBody.innerHTML += `<div class="row row-cols-3 py-5 my-4 bg-primary" id="user-row"></div>`;
   }
   
-  static get userTopicRequestsContainer() {
-    this.createUserTopicRequestsContainer();
-    return document.getElementById('user-topic-requests');
+  static get userRow() {
+    this.createUserRow();
+    const userRow = document.getElementById('user-row');
+    return userRow;
   }
-
-  static createAllOtherTopicRequestsContainer() {
-    this.mainBody.innerHTML += `<div class="row row-cols-1 row-cols-lg-3 mt-2" id="all-other-topic-requests"></div>`;
+  
+  static createUserCol() {
+    this.userRow.innerHTML += `<div class="col px-4 mx-4 bg-dark" id="user-col"></div>`;
+  }
+  
+  static get userCol() {
+    this.createUserCol();
+    const userCol = document.getElementById('user-col');
+    return userCol;
   }
   
   static get allOtherTopicRequestsContainer() {
