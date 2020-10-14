@@ -70,7 +70,7 @@ async function isLoggedIn() {
 async function autoRedirect() {
   const validLogin = await isLoggedIn();
   if (validLogin) {
-    fetchTopicRequests(REQS_URL);
+    renderTopicRequests(REQS_URL);
   } else {
     showLoginForm();
   }
@@ -81,6 +81,9 @@ function logoutAction() {
   localStorage.removeItem('jwt_token');
   localStorage.removeItem('current_user');
 }
+
+function renderTopicRequests(REQS_URL) {
+  let current_user = localStorage.getItem('current_user');
 
   async function fetchTopicRequests(url) {
     const jwtGetFetchOptions = {
