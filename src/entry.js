@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Show the login form
-async function showLoginForm() {
+function showLoginForm() {
   DOMElements.loginForm;
   let loginForm = document.getElementById('login-form');
   loginForm.addEventListener('submit', e => loginFormHandler(e));
@@ -82,15 +82,15 @@ function logoutAction() {
   localStorage.removeItem('current_user');
 }
 
-async function fetchTopicRequests(url) {
-  const jwtGetFetchOptions = {
-    method: 'GET',
-    headers: {Authorization: `Bearer ${localStorage.getItem('jwt_token')}`}
-  };
-  const resp = await fetch(url, jwtGetFetchOptions);
-  const topicRequests = await resp.json();
-  topicRequests.data.forEach(topicRequest => {
-    const newTopicRequest = new TopicRequest(topicRequest, topicRequest.attributes);
+  async function fetchTopicRequests(url) {
+    const jwtGetFetchOptions = {
+      method: 'GET',
+      headers: {Authorization: `Bearer ${localStorage.getItem('jwt_token')}`}
+    };  
+    const resp = await fetch(url, jwtGetFetchOptions);
+    const topicRequests = await resp.json();
+    return await topicRequests.data.forEach(topicRequest => {
+      const newTopicRequest = new TopicRequest(topicRequest, topicRequest.attributes);
     DOMElements.userTopicRequestsContainer.innerHTML += newTopicRequest.renderTopicRequest();
   })
 }
