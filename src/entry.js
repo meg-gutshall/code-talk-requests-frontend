@@ -103,8 +103,13 @@ function renderTopicRequests(REQS_URL) {
     })
   }
 
-function renderUserTopicRequests() {
-  DOMElements.userTopicRequestsContainer.innerHTML += newTopicRequest.renderTopicRequest();
+  DOMElements.userRow;
+  let userRow = document.getElementById('user-row');
+
+
+  DOMElements.allOtherRow;
+  let allOtherRow = document.getElementById('all-other-row')
+
 }
 
 function renderAllOtherTopicRequests() {
