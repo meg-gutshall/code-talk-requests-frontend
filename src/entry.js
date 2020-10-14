@@ -111,7 +111,10 @@ function renderTopicRequests(REQS_URL) {
   let allOtherRow = document.getElementById('all-other-row')
 
 }
-
+  
 function renderAllOtherTopicRequests() {
-  DOMElements.allOtherTopicRequestsContainer.innerHTML += newTopicRequest.renderTopicRequest();
+
+  // Call async/await functions to create DOM elements here?
+  fetchTopicRequests(REQS_URL);
 }
+
