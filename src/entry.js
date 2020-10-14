@@ -110,6 +110,15 @@ function renderTopicRequests(REQS_URL) {
   DOMElements.allOtherRow;
   let allOtherRow = document.getElementById('all-other-row')
 
+  
+  function renderUserTopicRequests(newTopicRequest) {
+    DOMElements.userCol;
+    let userCol = document.getElementById('user-col');
+    userRow.innerHTML = userCol;
+    userCol.innerHTML += newTopicRequest.createTopicRequestCard();
+    console.log("The current user's topic requests should have been rendered.");
+  }
+  
   function renderAllOtherTopicRequests(newTopicRequest) {
     DOMElements.allOtherCol;
     let allOtherCol = document.getElementById('all-other-col')
