@@ -97,10 +97,25 @@ class DOMElements {
     const userCol = document.getElementById('user-col');
     return userCol;
   }
+
+  static createAllOtherRow() {
+    this.mainBody.innerHTML += `<div class="row row-cols-3 py-5 my-4 bg-primary" id="all-other-row"></div>`;
+  }
   
-  static get allOtherTopicRequestsContainer() {
-    this.createAllOtherTopicRequestsContainer();
-    return document.getElementById('all-other-topic-requests');
+  static get allOtherRow() {
+    this.createAllOtherRow();
+    const allOtherRow = document.getElementById('all-other-row');
+    return allOtherRow;
+  }
+  
+  static createAllOtherCol() {
+    this.allOtherRow.innerHTML += `<div class="col px-4 mx-4 bg-secondary" id="all-other-col"></div>`;
+  }
+  
+  static get allOtherCol() {
+    this.createAllOtherCol();
+    const allOtherCol = document.getElementById('all-other-col');
+    return allOtherCol;
   }
 
   // ---------> End topic request elements
