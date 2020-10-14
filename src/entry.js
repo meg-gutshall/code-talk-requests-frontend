@@ -110,9 +110,14 @@ function renderTopicRequests(REQS_URL) {
   DOMElements.allOtherRow;
   let allOtherRow = document.getElementById('all-other-row')
 
-}
+  function renderAllOtherTopicRequests(newTopicRequest) {
+    DOMElements.allOtherCol;
+    let allOtherCol = document.getElementById('all-other-col')
+    allOtherRow.innerHTML = allOtherCol;
+    allOtherCol.innerHTML += newTopicRequest.createTopicRequestCard();
+    console.log("All other user's topic requests should have been rendered.");
+  }
   
-function renderAllOtherTopicRequests() {
 
   // Call async/await functions to create DOM elements here?
   fetchTopicRequests(REQS_URL);
