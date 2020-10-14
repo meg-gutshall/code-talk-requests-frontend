@@ -94,10 +94,15 @@ function renderTopicRequests(REQS_URL) {
     const topicRequests = await resp.json();
     return await topicRequests.data.forEach(topicRequest => {
       const newTopicRequest = new TopicRequest(topicRequest, topicRequest.attributes);
-    DOMElements.userTopicRequestsContainer.innerHTML += newTopicRequest.renderTopicRequest();
-  })
-}
-  
+      console.log("Topic request should be fetched.");
+      if (newTopicRequest.codepanionId == current_user) {
+        renderUserTopicRequests(newTopicRequest);
+      } else {
+        renderAllOtherTopicRequests(newTopicRequest);
+      }
+    })
+  }
+
 function renderUserTopicRequests() {
   DOMElements.userTopicRequestsContainer.innerHTML += newTopicRequest.renderTopicRequest();
 }
