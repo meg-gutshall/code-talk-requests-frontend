@@ -79,7 +79,7 @@ class DOMElements {
   // ---------> Start topic request elements
 
   static createUserRow() {
-    this.mainBody.innerHTML += `<div class="row row-cols-3 py-5 my-4 bg-primary" id="user-row"></div>`;
+    this.mainBody.innerHTML += `<div class="row row-cols-3 py-5 my-5 px-5" id="user-row"></div>`;
   }
   
   static get userRow() {
@@ -89,7 +89,7 @@ class DOMElements {
   }
   
   static createUserCol() {
-    this.userRow.innerHTML += `<div class="col px-4 mx-4 bg-dark" id="user-col"></div>`;
+    this.userRow.innerHTML += `<div class="col py-5 my-5 px-5 mx-5" id="user-col"></div>`;
   }
   
   static get userCol() {
@@ -99,7 +99,7 @@ class DOMElements {
   }
 
   static createAllOtherRow() {
-    this.mainBody.innerHTML += `<div class="row row-cols-3 py-5 my-4 bg-primary" id="all-other-row"></div>`;
+    this.mainBody.innerHTML += `<div class="row row-cols-3 py-5 my-5 px-5" id="all-other-row"></div>`;
   }
   
   static get allOtherRow() {
@@ -109,7 +109,7 @@ class DOMElements {
   }
   
   static createAllOtherCol() {
-    this.allOtherRow.innerHTML += `<div class="col px-4 mx-4 bg-secondary" id="all-other-col"></div>`;
+    this.allOtherRow.innerHTML += `<div class="col py-5 my-5 px-5 mx-5" id="all-other-col"></div>`;
   }
   
   static get allOtherCol() {
