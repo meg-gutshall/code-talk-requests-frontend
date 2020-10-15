@@ -82,6 +82,9 @@ function logoutAction() {
   localStorage.removeItem('current_user');
 }
 
+// Display topic requests
+// Topic requests are separated by current user and all other users
+// This occurs after successful login
 function renderTopicRequests(REQS_URL) {
   let current_user = localStorage.getItem('current_user');
 
@@ -128,7 +131,7 @@ function renderTopicRequests(REQS_URL) {
   }
   
 
-  // Call async/await functions to create DOM elements here?
+  // ? Call async/await functions to create DOM elements here?
   fetchTopicRequests(REQS_URL);
 }
 
