@@ -88,6 +88,11 @@ function logoutAction() {
 function renderTopicRequests(REQS_URL) {
   let current_user = localStorage.getItem('current_user');
 
+  DOMElements.userRow;
+  let userRow = document.getElementById('user-row')
+  DOMElements.allOtherRow;
+  let allOtherRow = document.getElementById('all-other-row')
+
   async function fetchTopicRequests(url) {
     const jwtGetFetchOptions = {
       method: 'GET',
