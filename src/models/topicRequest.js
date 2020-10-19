@@ -10,13 +10,15 @@ class TopicRequest {
 
   createTopicRequestCard() {
     return `
-      <div class="card my-5" data-id=${this.id}>
-        <div class="card-body">
-          <h3 class="card-title">${this.topic}</h3>
-          <p class="card-text">${this.description}</p>
-        </div>
-        <div class="card-body text-right">
-        <p class="card-text"><a href="#" class="card-link">^</a> ${this.upvotes}</p>
+      <div class="col">
+        <div class="card my-5" data-id=${this.id}>
+          <div class="card-body">
+            <h3 class="card-title">${this.topic}</h3>
+            <p class="card-text">${this.description}</p>
+          </div>
+          <div class="card-body text-right">
+          <p class="card-text"><a href="#" class="card-link">^</a> ${this.upvotes}</p>
+          </div>
         </div>
       </div>
     `

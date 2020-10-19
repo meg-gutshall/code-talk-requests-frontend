@@ -105,28 +105,16 @@ function renderTopicRequests(REQS_URL) {
       }
     })
   }
-
-  DOMElements.userRow;
-  let userRow = document.getElementById('user-row');
-
-
-  DOMElements.allOtherRow;
-  let allOtherRow = document.getElementById('all-other-row')
-
   
   function renderUserTopicRequests(newTopicRequest) {
-    DOMElements.userCol;
-    let userCol = document.getElementById('user-col');
-    userRow.innerHTML = userCol;
-    userCol.innerHTML += newTopicRequest.createTopicRequestCard();
+    let userCol = newTopicRequest.createTopicRequestCard();
+    userRow.innerHTML += userCol;
     console.log("The current user's topic requests should have been rendered.");
   }
   
   function renderAllOtherTopicRequests(newTopicRequest) {
-    DOMElements.allOtherCol;
-    let allOtherCol = document.getElementById('all-other-col')
-    allOtherRow.innerHTML = allOtherCol;
-    allOtherCol.innerHTML += newTopicRequest.createTopicRequestCard();
+    let allOtherCol = newTopicRequest.createTopicRequestCard();
+    allOtherRow.innerHTML += allOtherCol;
     console.log("All other user's topic requests should have been rendered.");
   }
   

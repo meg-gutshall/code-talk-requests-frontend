@@ -84,18 +84,7 @@ class DOMElements {
   
   static get userRow() {
     this.createUserRow();
-    const userRow = document.getElementById('user-row');
-    return userRow;
-  }
-  
-  static createUserCol() {
-    this.userRow.innerHTML += `<div class="col py-5 my-5 px-5 mx-5" id="user-col"></div>`;
-  }
-  
-  static get userCol() {
-    this.createUserCol();
-    const userCol = document.getElementById('user-col');
-    return userCol;
+    return document.getElementById('user-row');
   }
 
   static createAllOtherRow() {
@@ -104,18 +93,7 @@ class DOMElements {
   
   static get allOtherRow() {
     this.createAllOtherRow();
-    const allOtherRow = document.getElementById('all-other-row');
-    return allOtherRow;
-  }
-  
-  static createAllOtherCol() {
-    this.allOtherRow.innerHTML += `<div class="col py-5 my-5 px-5 mx-5" id="all-other-col"></div>`;
-  }
-  
-  static get allOtherCol() {
-    this.createAllOtherCol();
-    const allOtherCol = document.getElementById('all-other-col');
-    return allOtherCol;
+    return document.getElementById('all-other-row');
   }
 
   // ---------> End topic request elements
