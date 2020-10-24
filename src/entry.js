@@ -99,18 +99,18 @@ function renderTopicRequests(REQS_URL) {
     })
     return allRequests;
   }
-
+  
   DOMElements.userRow;
-  let userRow = document.getElementById('user-row')
   DOMElements.allOtherRow;
-  let allOtherRow = document.getElementById('all-other-row')
-
+  
   function renderUserTopicRequests(newTopicRequest) {
+    let userRow = document.getElementById('user-row');
     let userCol = newTopicRequest.createTopicRequestCard();
     userRow.innerHTML += userCol;
   }
   
   function renderAllOtherTopicRequests(newTopicRequest) {
+    let allOtherRow = document.getElementById('all-other-row');
     let allOtherCol = newTopicRequest.createTopicRequestCard();
     allOtherRow.innerHTML += allOtherCol;
   }
