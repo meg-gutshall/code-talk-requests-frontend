@@ -88,11 +88,6 @@ function logoutAction() {
 function renderTopicRequests(REQS_URL) {
   let current_user = localStorage.getItem('current_user');
 
-  DOMElements.userRow;
-  let userRow = document.getElementById('user-row')
-  DOMElements.allOtherRow;
-  let allOtherRow = document.getElementById('all-other-row')
-
   async function fetchTopicRequests(url) {
     const jwtGetFetchOptions = {
       method: 'GET',
@@ -100,26 +95,37 @@ function renderTopicRequests(REQS_URL) {
     };  
     const resp = await fetch(url, jwtGetFetchOptions);
     const topicRequests = await resp.json();
-    return await topicRequests.data.forEach(topicRequest => {
+    let allRequests = await topicRequests.data.forEach(topicRequest => {
       const newTopicRequest = new TopicRequest(topicRequest, topicRequest.attributes);
-      console.log("Topic request should be fetched.");
-      if (newTopicRequest.codepanionId == current_user) {
+      console.log("fetchTopicRequests -> newTopicRequest", newTopicRequest)
+      if (newTopicRequest.codepanionId == parseInt(current_user)) {
         renderUserTopicRequests(newTopicRequest);
       } else {
         renderAllOtherTopicRequests(newTopicRequest);
       }
     })
+    console.log("document", document)
+    return allRequests;
   }
-  
+
+  DOMElements.userRow;
+  let userRow = document.getElementById('user-row')
+  DOMElements.allOtherRow;
+  let allOtherRow = document.getElementById('all-other-row')
+
   function renderUserTopicRequests(newTopicRequest) {
     let userCol = newTopicRequest.createTopicRequestCard();
+    console.log("renderUserTopicRequests -> userCol", userCol)
     userRow.innerHTML += userCol;
+    console.log("renderUserTopicRequests -> userRow", userRow)
     console.log("The current user's topic requests should have been rendered.");
   }
   
   function renderAllOtherTopicRequests(newTopicRequest) {
     let allOtherCol = newTopicRequest.createTopicRequestCard();
+    console.log("renderAllOtherTopicRequests -> allOtherCol", allOtherCol)
     allOtherRow.innerHTML += allOtherCol;
+    console.log("renderAllOtherTopicRequests -> allOtherRow", allOtherRow)
     console.log("All other user's topic requests should have been rendered.");
   }
   

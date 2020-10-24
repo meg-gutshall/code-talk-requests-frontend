@@ -1,0 +1,166 @@
+{
+  data: [
+  {
+  id: "1",
+  type: "topic_request",
+  attributes: {
+  topic: "Confero enim certe. Quis sodalitas thymum. Statua.",
+  description: "Consuasor aut cado. Attonbitus quia tepesco.",
+  upvotes: 11,
+  codepanion_id: 1
+  },
+  relationships: {
+  codepanion: {
+  data: {
+  id: "1",
+  type: "user"
+  }
+  }
+  }
+  },
+  {
+  id: "2",
+  type: "topic_request",
+  attributes: {
+  topic: "Rerum alias temptatio. Totus labore careo. Conatu.",
+  description: "In earum abduco. Delibero defetiscor cui.",
+  upvotes: 7,
+  codepanion_id: 2
+  },
+  relationships: {
+  codepanion: {
+  data: {
+  id: "2",
+  type: "user"
+  }
+  }
+  }
+  },
+  {
+  id: "3",
+  type: "topic_request",
+  attributes: {
+  topic: "Ciminatio curiositas autem. A nulla maxime. Confi.",
+  description: "Cultura carpo advenio. Sponte aliqua defungo.",
+  upvotes: 18,
+  codepanion_id: 3
+  },
+  relationships: {
+  codepanion: {
+  data: {
+  id: "3",
+  type: "user"
+  }
+  }
+  }
+  },
+  {
+  id: "4",
+  type: "topic_request",
+  attributes: {
+  topic: "Sit stabilis infit. Quia vivo molestiae. Theatrum.",
+  description: "Depraedor decor voco. Porro thema at.",
+  upvotes: 15,
+  codepanion_id: 3
+  },
+  relationships: {
+  codepanion: {
+  data: {
+  id: "3",
+  type: "user"
+  }
+  }
+  }
+  },
+  {
+  id: "5",
+  type: "topic_request",
+  attributes: {
+  topic: "Caveo sumptus omnis. Amor magnam terror. Vitae ap.",
+  description: "Quia sol tum. Civitas sed urbanus.",
+  upvotes: 7,
+  codepanion_id: 1
+  },
+  relationships: {
+  codepanion: {
+  data: {
+  id: "1",
+  type: "user"
+  }
+  }
+  }
+  },
+  {
+  id: "6",
+  type: "topic_request",
+  attributes: {
+  topic: "Vaco debilito celebrer. Cum patrocinor terror. Da.",
+  description: "Caritas illo ultio. Vomer defessus crastinus.",
+  upvotes: 9,
+  codepanion_id: 1
+  },
+  relationships: {
+  codepanion: {
+  data: {
+  id: "1",
+  type: "user"
+  }
+  }
+  }
+  },
+  {
+  id: "7",
+  type: "topic_request",
+  attributes: {
+  topic: "Demo arma molestias. Verus abbas trucido. Autem p.",
+  description: "Qui testimonium coadunatio. Demonstro adinventitias claro.",
+  upvotes: 6,
+  codepanion_id: 2
+  },
+  relationships: {
+  codepanion: {
+  data: {
+  id: "2",
+  type: "user"
+  }
+  }
+  }
+  },
+  {
+  id: "8",
+  type: "topic_request",
+  attributes: {
+  topic: "Conscendo cicuta tyrannus. Tantum illum cur. Solv.",
+  description: "Appello decretum officia. Soluta vereor aliquid.",
+  upvotes: 18,
+  codepanion_id: 3
+  },
+  relationships: {
+  codepanion: {
+  data: {
+  id: "3",
+  type: "user"
+  }
+  }
+  }
+  },
+  {
+  id: "9",
+  type: "topic_request",
+  attributes: {
+  topic: "Vespillo deleniti audax. Autem animi speciosus. S.",
+  description: "Antea caelum atque. Quia patria desipio.",
+  upvotes: 15,
+  codepanion_id: 2
+  },
+  relationships: {
+  codepanion: {
+  data: {
+  id: "2",
+  type: "user"
+  }
+  }
+  }
+  }
+  ]
+  }
