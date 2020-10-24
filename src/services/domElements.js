@@ -76,7 +76,7 @@ class DOMElements {
   // ---------> End login elements
 
 
-  // ---------> Start topic request elements
+  // ---------> Start topic request row elements
 
   static createUserRow() {
     this.mainBody.innerHTML += `<div class="row row-cols-3 py-5 my-5 px-5" id="user-row"></div>`;
@@ -96,7 +96,7 @@ class DOMElements {
     return document.getElementById('all-other-row');
   }
 
-  // ---------> End topic request elements
+  // ---------> End topic request row elements
 
 }
 

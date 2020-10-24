@@ -9,13 +9,7 @@ const REQS_URL = `${BASE_URL}topic_requests`
 const LOGIN_URL = `${BASE_URL}login`
 
 document.addEventListener('DOMContentLoaded', () => {
-  // PSEUDOCODE
-  // Check to see if user is logged in
-    // if yes, show topic requests
-    // if no, show login form
-
   autoRedirect();
-  // Isn't asynchronous -- need to wait until the user is logged in ALL the way to render the topic requests
 });
 
 // Show the login form
@@ -97,14 +91,12 @@ function renderTopicRequests(REQS_URL) {
     const topicRequests = await resp.json();
     let allRequests = await topicRequests.data.forEach(topicRequest => {
       const newTopicRequest = new TopicRequest(topicRequest, topicRequest.attributes);
-      console.log("fetchTopicRequests -> newTopicRequest", newTopicRequest)
       if (newTopicRequest.codepanionId == parseInt(current_user)) {
         renderUserTopicRequests(newTopicRequest);
       } else {
         renderAllOtherTopicRequests(newTopicRequest);
       }
     })
-    console.log("document", document)
     return allRequests;
   }
 
@@ -115,22 +107,14 @@ function renderTopicRequests(REQS_URL) {
 
   function renderUserTopicRequests(newTopicRequest) {
     let userCol = newTopicRequest.createTopicRequestCard();
-    console.log("renderUserTopicRequests -> userCol", userCol)
     userRow.innerHTML += userCol;
-    console.log("renderUserTopicRequests -> userRow", userRow)
-    console.log("The current user's topic requests should have been rendered.");
   }
   
   function renderAllOtherTopicRequests(newTopicRequest) {
     let allOtherCol = newTopicRequest.createTopicRequestCard();
-    console.log("renderAllOtherTopicRequests -> allOtherCol", allOtherCol)
     allOtherRow.innerHTML += allOtherCol;
-    console.log("renderAllOtherTopicRequests -> allOtherRow", allOtherRow)
-    console.log("All other user's topic requests should have been rendered.");
   }
   
-
-  // ? Call async/await functions to create DOM elements here?
   fetchTopicRequests(REQS_URL);
 }
 
