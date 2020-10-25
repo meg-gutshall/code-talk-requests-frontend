@@ -3,8 +3,13 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 
-module.exports = {
+const config = {
   entry: './src/entry.js',
+  output: {
+    path: path.resolve(__dirname, '../', 'dist'),
+    filename: '[name].bundle.js',
+    publicPath: '/'
+  },
   module: {
     rules: [
       {
@@ -52,6 +57,9 @@ module.exports = {
   resolve: {
     extensions: ['*', '.js']
   },
+  devServer: {
+    contentBase: './dist',
+  },
   plugins: [
     new CleanWebpackPlugin(),
     new ManifestPlugin(),
@@ -64,13 +72,23 @@ module.exports = {
         viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no'
       }
     })
-  ],
-  output: {
-    path: path.resolve(__dirname, '../', 'dist'),
-    publicPath: '/',
-    filename: '[name].bundle.js'
-  },
-  devServer: {
-    contentBase: './dist',
+  ]
+};
+
+module.exports = (env, argv) => {
+  
+  switch (argv.mode) {
+    case 'development':
+      config.devtool = 'eval-source-map';
+      break;
+    case 'production':
+      config.devtool = 'source-map';
+      break;
+    default:
+      config.mode = 'development';
+      config.devtool = 'eval-source-map';
+      break;
   }
+
+  return config;
 };
