@@ -99,8 +99,19 @@ class DOMElements {
   // ---------> End topic request row elements
 
 
-  // ---------> Start new topic request form
+  // ---------> Start new topic request button
 
+  static createModalButton() {
+    this.navMenu.innerHTML += 
+      `<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newTopicRequestModal" id="modalButton">New Topic Request</button>`;
+  }
+
+  static get modalButton() {
+    this.createModalButton();
+    return document.getElementById('modalButton');
+  }
+
+  // ---------> End new topic request button
   static createTopicRequestModal() {
     const topicRequestModal = 
       `<div class="modal-dialog">
