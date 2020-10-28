@@ -112,42 +112,49 @@ class DOMElements {
   }
 
   // ---------> End new topic request button
+
+
+  // ---------> Start new topic request modal and form
+
   static createTopicRequestModal() {
-    const topicRequestModal = 
-      `<div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="newTopicRequestModalLabel">Create a New Topic Request</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="form-group">
-              <label for="topicRequestSubject">Topic Request Subject</label>
-              <input type="text" class="form-control" id="topicRequestSubject" required>
+    this.navMenu.innerHTML += `
+      <div class="modal fade" id="newTopicRequestModal" tabindex="-1" role="dialog" aria-labelledby="newTopicRequestModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="newTopicRequestModalLabel">Create a New Topic Request</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
-            <div class="form-group">
-              <label for="topicRequestDescription">Topic Request Description</label>
-              <textarea class="form-control" id="topicRequestDescription" rows="3"></textarea>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="topicRequestSubject">Topic Request Subject</label>
+                  <input type="text" class="form-control" id="topicRequestSubject" required>
+                </div>
+                <div class="form-group">
+                  <label for="topicRequestDescription">Topic Request Description</label>
+                  <textarea class="form-control" id="topicRequestDescription" rows="7"></textarea>
+                </div>
+              </form>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
           </div>
         </div>
-      </div>`
-    return topicRequestModal;
+      </div>
+    `
   }
 
   static get topicRequestModal() {
     this.createTopicRequestModal();
     return document.getElementById('newTopicRequestModal');
-    // TODO: Attach to event listener for when navbar button is clicked
   }
 
-  // ---------> End new topic request form
+  // ---------> End new topic request modal and form
 
 }
 
