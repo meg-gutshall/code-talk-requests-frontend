@@ -3,7 +3,7 @@ class DOMElements {
     DOMElements.newElement = undefined;
   }
 
-  static get navMenu() { return document.getElementById('navbarToggler') }
+  static get navMenu() { return document.getElementById('navbar') }
   static get mainBody() { return document.getElementById('main-container') }
   static get footerBody() { return document.getElementById('footer-body') }
 
