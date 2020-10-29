@@ -130,6 +130,14 @@ function addNewTopicRequestButton() {
     newTopicRequestForm.addEventListener('submit', e => newTopicRequestFormHandler(e));
   };
   
+  function newTopicRequestFormHandler(e) {
+    e.preventDefault();
+    console.log('Pressed button!');
+    const ideaInput = e.target.querySelector('#newTopicRequestTitle').value;
+    const descriptionInput = e.target.querySelector('#newTopicRequestDescription').value;
+    const upvotes = 0;
+    const codepanionId = parseInt(current_user);
+    postNewTopicRequest(ideaInput, descriptionInput, upvotes, codepanionId);
   };
   // TODO: Attach to event listener for when navbar button is clicked
   // loginForm.addEventListener('submit', e => loginFormHandler(e));
