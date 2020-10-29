@@ -140,5 +140,21 @@ function addNewTopicRequestButton() {
     postNewTopicRequest(ideaInput, descriptionInput, upvotes, codepanionId);
   };
   // TODO: Attach to event listener for when navbar button is clicked
-  // loginForm.addEventListener('submit', e => loginFormHandler(e));
+  function postNewTopicRequest(idea, description, upvotes, codepanion_id) {
+    const newTopicRequestSubmission = {
+      method: 'POST',
+      headers: { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      referrerPolicy: 'no-referrer',
+      body: JSON.stringify({ topic_request: { idea, description, upvotes, codepanion_id }})
+    };
+    fetch(REQS_URL, newTopicRequestSubmission)
+      .then(resp => resp.json())
+      .then(postedTopicRequest => {
+        const newTopicRequest = new TopicRequest(postedTopicRequest, postedTopicRequest.attributes);
+        renderUserTopicRequests(newTopicRequest);
+      })
+  };
 }
