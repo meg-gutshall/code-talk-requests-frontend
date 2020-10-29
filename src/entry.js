@@ -122,11 +122,15 @@ function renderTopicRequests(REQS_URL) {
 function addNewTopicRequestButton() {
   console.log('Add button!');
 
-  DOMElements.modalButton;
-  let modalButton = document.getElementById('modalButton');
-  DOMElements.topicRequestModal;
-  let newTopicRequestModal = document.getElementById('newTopicRequestModal');
+  function renderNewTopicRequestButton() {
+    DOMElements.modalButton;
+    DOMElements.topicRequestModal;
+    let newTopicRequestForm = document.getElementById('newTopicRequestForm');
+    console.log('Added button!');
+    newTopicRequestForm.addEventListener('submit', e => newTopicRequestFormHandler(e));
+  };
   
+  };
   // TODO: Attach to event listener for when navbar button is clicked
   // loginForm.addEventListener('submit', e => loginFormHandler(e));
 }
