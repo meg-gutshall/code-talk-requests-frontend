@@ -133,7 +133,7 @@ function addNewTopicRequestButton() {
   function newTopicRequestFormHandler(e) {
     e.preventDefault();
     console.log('Pressed button!');
-    const ideaInput = e.target.querySelector('#newTopicRequestTitle').value;
+    const ideaInput = e.target.querySelector('#newTopicRequestIdea').value;
     const descriptionInput = e.target.querySelector('#newTopicRequestDescription').value;
     const upvotes = 0;
     const codepanionId = parseInt(current_user);
@@ -150,6 +150,7 @@ function addNewTopicRequestButton() {
       referrerPolicy: 'no-referrer',
       body: JSON.stringify({ topic_request: { idea, description, upvotes, codepanion_id }})
     };
+    // Catching bug here at POST fetch
     fetch(REQS_URL, newTopicRequestSubmission)
       .then(resp => resp.json())
       .then(postedTopicRequest => {

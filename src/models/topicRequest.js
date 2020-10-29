@@ -1,7 +1,7 @@
 class TopicRequest {
   constructor(topicRequest, topicRequestAttributes) {
     this.id = topicRequest.id;
-    this.topic = topicRequestAttributes.topic;
+    this.idea = topicRequestAttributes.idea;
     this.description = topicRequestAttributes.description;
     this.upvotes = topicRequestAttributes.upvotes;
     this.codepanionId = topicRequestAttributes.codepanion_id;
@@ -13,7 +13,7 @@ class TopicRequest {
       <div class="col my-3">
         <div class="card h-100" data-id=${this.id}>
           <div class="card-body">
-            <h3 class="card-title">${this.topic}</h3>
+            <h3 class="card-title">${this.idea}</h3>
             <p class="card-text">${this.description}</p>
           </div>
           <div class="card-body text-right">
