@@ -121,14 +121,14 @@ class DOMElements {
       <div class="modal fade" id="newTopicRequestModal" tabindex="-1" role="dialog" aria-labelledby="newTopicRequestModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
           <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="newTopicRequestModalLabel">Create a New Topic Request</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form>
+            <form id="newTopicRequestForm">
+              <div class="modal-header">
+                <h5 class="modal-title" id="newTopicRequestModalLabel">Create a New Topic Request</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
                 <div class="form-group">
                   <label for="newTopicRequestIdea">Topic Request Idea</label>
                   <input type="text" class="form-control" id="newTopicRequestIdea" required>
@@ -137,12 +137,12 @@ class DOMElements {
                   <label for="newTopicRequestDescription">Topic Request Description</label>
                   <textarea class="form-control" id="newTopicRequestDescription" rows="7"></textarea>
                 </div>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-primary" id="createNewTopicRequest">Create</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
