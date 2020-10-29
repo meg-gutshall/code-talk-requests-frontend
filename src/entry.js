@@ -120,7 +120,7 @@ function renderTopicRequests(REQS_URL) {
 
 // Add 'New Topic Request' button
 function addNewTopicRequestButton() {
-  console.log('Add button!');
+  let current_user = localStorage.getItem('current_user');
 
   function renderNewTopicRequestButton() {
     DOMElements.modalButton;
@@ -139,7 +139,7 @@ function addNewTopicRequestButton() {
     const codepanionId = parseInt(current_user);
     postNewTopicRequest(ideaInput, descriptionInput, upvotes, codepanionId);
   };
-  // TODO: Attach to event listener for when navbar button is clicked
+
   function postNewTopicRequest(idea, description, upvotes, codepanion_id) {
     const newTopicRequestSubmission = {
       method: 'POST',
@@ -157,4 +157,6 @@ function addNewTopicRequestButton() {
         renderUserTopicRequests(newTopicRequest);
       })
   };
+
+  renderNewTopicRequestButton();
 }
