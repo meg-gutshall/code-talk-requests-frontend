@@ -130,12 +130,12 @@ class DOMElements {
             <div class="modal-body">
               <form>
                 <div class="form-group">
-                  <label for="topicRequestSubject">Topic Request Subject</label>
-                  <input type="text" class="form-control" id="topicRequestSubject" required>
+                  <label for="newTopicRequestIdea">Topic Request Idea</label>
+                  <input type="text" class="form-control" id="newTopicRequestIdea" required>
                 </div>
                 <div class="form-group">
-                  <label for="topicRequestDescription">Topic Request Description</label>
-                  <textarea class="form-control" id="topicRequestDescription" rows="7"></textarea>
+                  <label for="newTopicRequestDescription">Topic Request Description</label>
+                  <textarea class="form-control" id="newTopicRequestDescription" rows="7"></textarea>
                 </div>
               </form>
             </div>

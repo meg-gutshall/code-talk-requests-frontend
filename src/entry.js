@@ -65,7 +65,7 @@ async function autoRedirect() {
   const validLogin = await isLoggedIn();
   if (validLogin) {
     renderTopicRequests(REQS_URL);
-    renderNewTopicRequestButton();
+    addNewTopicRequestButton();
   } else {
     showLoginForm();
   }
@@ -120,7 +120,7 @@ function renderTopicRequests(REQS_URL) {
 }
 
 // Add 'New Topic Request' button
-function renderNewTopicRequestButton() {
+function addNewTopicRequestButton() {
   console.log('Add button!');
 
   DOMElements.modalButton;
