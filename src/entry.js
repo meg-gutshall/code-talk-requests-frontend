@@ -82,6 +82,8 @@ function logoutAction() {
 // This occurs after successful login
 function renderTopicRequests(REQS_URL) {
   let current_user = localStorage.getItem('current_user');
+  DOMElements.userRow;
+  DOMElements.allOtherRow;
 
   async function fetchTopicRequests(url) {
     const jwtGetFetchOptions = {
@@ -100,9 +102,6 @@ function renderTopicRequests(REQS_URL) {
     })
     return allRequests;
   }
-  
-  DOMElements.userRow;
-  DOMElements.allOtherRow;
   
   function renderUserTopicRequests(newTopicRequest) {
     let userRow = document.getElementById('user-row');
