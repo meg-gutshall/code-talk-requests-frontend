@@ -128,36 +128,41 @@ function addNewTopicRequestButton() {
     let newTopicRequestForm = document.getElementById('newTopicRequestForm');
     console.log('Added button!');
     newTopicRequestForm.addEventListener('submit', e => newTopicRequestFormHandler(e));
-  };
+  }
   
   function newTopicRequestFormHandler(e) {
-    e.preventDefault();
     console.log('Pressed button!');
     const ideaInput = e.target.querySelector('#newTopicRequestIdea').value;
     const descriptionInput = e.target.querySelector('#newTopicRequestDescription').value;
     const upvotes = 0;
     const codepanionId = parseInt(current_user);
     postNewTopicRequest(ideaInput, descriptionInput, upvotes, codepanionId);
-  };
+    // Use below instead of e.preventDefault() since my form is in a modal and I want to close it upon completion.
+    return false
+  }
 
   function postNewTopicRequest(idea, description, upvotes, codepanion_id) {
     const newTopicRequestSubmission = {
       method: 'POST',
       headers: { 
         'Content-Type': 'application/json',
-        'Accept': 'application/json'
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('jwt_token')}`
       },
       referrerPolicy: 'no-referrer',
       body: JSON.stringify({ topic_request: { idea, description, upvotes, codepanion_id }})
     };
-    // Catching bug here at POST fetch
     fetch(REQS_URL, newTopicRequestSubmission)
       .then(resp => resp.json())
-      .then(postedTopicRequest => {
-        const newTopicRequest = new TopicRequest(postedTopicRequest, postedTopicRequest.attributes);
-        renderUserTopicRequests(newTopicRequest);
+      .then(function(postedTopicRequest) {
+        const newTopicRequest = new TopicRequest(postedTopicRequest.topic_request.data, postedTopicRequest.topic_request.data.attributes);
+        
+        // renderUserTopicRequests()
+        let userRow = document.getElementById('user-row');
+        let userCol = newTopicRequest.createTopicRequestCard();
+        userRow.innerHTML += userCol;
       })
-  };
+  }
 
   renderNewTopicRequestButton();
 }
