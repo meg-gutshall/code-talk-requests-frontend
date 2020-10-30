@@ -28,12 +28,12 @@ class TopicRequest {
     return this.all.find((topicRequest) => topicRequest.id === id)
   }
 
-  static updateTopicRequest(topicRequestData) {
-    const topicRequest = this.findTopicRequest(topicRequestData.id);
-    topicRequest.topic = topicRequestData.attributes.topic;
-    topicRequest.description = topicRequestData.attributes.description;
-    topicRequest.upvotes = topicRequestData.attributes.upvotes;
-    topicRequest.codepanionId = topicRequestData.attributes.codepanion_id;
+  static updateTopicRequest(updatedTopicRequest) {
+    const topicRequest = this.findTopicRequest(updatedTopicRequest.id);
+    topicRequest.idea = updatedTopicRequestAttributes.idea;
+    topicRequest.description = updatedTopicRequestAttributes.description;
+    topicRequest.upvotes = updatedTopicRequestAttributes.upvotes;
+    topicRequest.codepanionId = updatedTopicRequestAttributes.codepanion_id;
     return topicRequest;
   }
 
