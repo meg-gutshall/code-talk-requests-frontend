@@ -16,8 +16,9 @@ class TopicRequest {
             <h3 class="card-title">${this.idea}</h3>
             <p class="card-text">${this.description}</p>
           </div>
-          <div class="card-body text-right">
-          <p class="card-text"><a href="#" class="card-link">^</a> ${this.upvotes}</p>
+          <div class="card-footer clearfix">
+            <p class="card-text float-left" id="upvote-count">${this.upvotes} Upvotes</p>
+            <button type="submit" class="btn btn-primary float-right" id="upvote"><i class="fas fa-angle-up fa-lg"></i></button>
           </div>
         </div>
       </div>

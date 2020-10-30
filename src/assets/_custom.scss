@@ -4,18 +4,24 @@
   background-color: $silver-pink;
 }
 
-#user-col {
-  background-color: $dark-lavender;
-}
-
 #all-other-row {
   background-color: $old-lavender;
 }
 
-#all-other-col {
-  background-color: $melon;
+.btn-secondary {
+  color: $white;
 }
 
-.card {
-  background-color: $timberwolf;
+.card-footer {
+  background-color: $apricot;
+}
+
+.card-footer > #upvote.btn {
+  display: block;
+}
+
+.card-footer > #upvote-count {
+  display: inline-block;
+  margin: 0;
+  vertical-align: bottom;
 }

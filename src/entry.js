@@ -1,5 +1,6 @@
 import './assets/main.scss';
 import 'bootstrap/dist/js/bootstrap';
+import '@fortawesome/fontawesome-free/js/all.js';
 import { DOMElements } from './services/domElements';
 import { TopicRequest } from './models/topicRequest';
 import { User } from './models/user';
@@ -166,3 +167,6 @@ function addNewTopicRequestButton() {
 
   renderNewTopicRequestButton();
 }
+
+// Make 'Upvote' button work
+
