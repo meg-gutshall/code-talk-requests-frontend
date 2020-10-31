@@ -167,6 +167,3 @@ function addNewTopicRequestButton() {
 
   renderNewTopicRequestButton();
 }
-
-// Make 'Upvote' button work
-
