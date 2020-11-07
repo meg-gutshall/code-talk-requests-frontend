@@ -83,7 +83,7 @@ function addNewTopicRequestButton() {
     const codepanionId = parseInt(current_user);
     postNewTopicRequest(ideaInput, descriptionInput, upvotes, codepanionId);
     // Use below instead of e.preventDefault() since my form is in a modal and I want to close it upon completion.
-    return false
+    return false;
   }
 
   function postNewTopicRequest(idea, description, upvotes, codepanion_id) {
