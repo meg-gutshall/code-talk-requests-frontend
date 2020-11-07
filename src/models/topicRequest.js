@@ -42,4 +42,4 @@ class TopicRequest {
 
 TopicRequest.all = [];
 
-export { TopicRequest };
+export default TopicRequest;

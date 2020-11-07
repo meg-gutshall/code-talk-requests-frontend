@@ -1,9 +1,9 @@
 import './assets/main.scss';
 import 'bootstrap/dist/js/bootstrap';
 import '@fortawesome/fontawesome-free/js/all.js';
-import { DOMElements } from './services/domElements';
-import { TopicRequest } from './models/topicRequest';
-import { User } from './models/user';
+import DOMElements from './services/domElements';
+import TopicRequest from './models/topicRequest';
+import { isLoggedIn, showLoginForm } from './services/authorization';
 
 const BASE_URL = "http://localhost:3000/api/v1/"
 const REQS_URL = `${BASE_URL}topic_requests`
@@ -113,3 +113,5 @@ function addNewTopicRequestButton() {
 
   renderNewTopicRequestButton();
 }
+
+export { LOGIN_URL, autoRedirect };

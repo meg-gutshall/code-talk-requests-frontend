@@ -32,4 +32,4 @@ class User {
 
 User.all = [];
 
-export { User };
+export default User;

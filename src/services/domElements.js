@@ -158,4 +158,4 @@ class DOMElements {
 
 }
 
-export { DOMElements };
+export default DOMElements;
