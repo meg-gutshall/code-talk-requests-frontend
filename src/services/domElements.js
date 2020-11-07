@@ -103,7 +103,7 @@ class DOMElements {
 
   static createModalButton() {
     this.navMenu.innerHTML += 
-      `<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newTopicRequestModal" id="modalButton">New Topic Request</button>`;
+      `<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newTopicRequestForm" id="modalButton">New Topic Request</button>`;
   }
 
   static get modalButton() {
@@ -118,40 +118,38 @@ class DOMElements {
 
   static createTopicRequestModal() {
     this.navMenu.innerHTML += `
-      <div class="modal fade" id="newTopicRequestModal" tabindex="-1" role="dialog" aria-labelledby="newTopicRequestModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+      <form class="modal fade" id="newTopicRequestForm" tabindex="-1" role="dialog" aria-labelledby="newTopicRequestFormLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
           <div class="modal-content">
-            <form id="newTopicRequestForm">
-              <div class="modal-header">
-                <h5 class="modal-title" id="newTopicRequestModalLabel">Create a New Topic Request</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                </button>
+            <div class="modal-header">
+              <h5 class="modal-title" id="newTopicRequestFormLabel">Create a New Topic Request</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><i class="fas fa-times"></i></span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="newTopicRequestIdea">Topic Request Idea</label>
+                <input type="text" class="form-control" id="newTopicRequestIdea" required>
               </div>
-              <div class="modal-body">
-                <div class="form-group">
-                  <label for="newTopicRequestIdea">Topic Request Idea</label>
-                  <input type="text" class="form-control" id="newTopicRequestIdea" required>
-                </div>
-                <div class="form-group">
-                  <label for="newTopicRequestDescription">Topic Request Description</label>
-                  <textarea class="form-control" id="newTopicRequestDescription" rows="7"></textarea>
-                </div>
+              <div class="form-group">
+                <label for="newTopicRequestDescription">Topic Request Description</label>
+                <textarea class="form-control" id="newTopicRequestDescription" rows="7"></textarea>
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                <button type="submit" class="btn btn-primary" id="createNewTopicRequest">Create</button>
-              </div>
-            </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary" id="createNewTopicRequest">Create</button>
+            </div>
           </div>
         </div>
-      </div>
+      </form>
     `
   }
 
   static get topicRequestModal() {
     this.createTopicRequestModal();
-    return document.getElementById('newTopicRequestModal');
+    return document.getElementById('newTopicRequestForm');
   }
 
   // ---------> End new topic request modal and form
