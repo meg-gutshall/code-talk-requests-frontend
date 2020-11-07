@@ -12,13 +12,14 @@ class User {
     return this.all.find((user) => user.id === id)
   }
 
-  static set currentUser(id) {
-    return this.all.find((user) => user.id === id)
-  }
+  // WIP: Set current user instance
+  // static set currentUser(id) {
+  //   return this.all.find((user) => user.id === id)
+  // }
 
-  static get currentUser() {
-    return this.all.find((user) => user.id === id)
-  }
+  // static get currentUser() {
+  //   return this.all.find((user) => user.id === id)
+  // }
 
   static updateUser(userData) {
     const user = this.findUser(userData.id);
