@@ -73,12 +73,10 @@ function addNewTopicRequestButton() {
     DOMElements.modalButton;
     DOMElements.topicRequestModal;
     let newTopicRequestForm = document.getElementById('newTopicRequestForm');
-    console.log('Added button!');
     newTopicRequestForm.addEventListener('submit', e => newTopicRequestFormHandler(e));
   }
   
   function newTopicRequestFormHandler(e) {
-    console.log('Pressed button!');
     const ideaInput = e.target.querySelector('#newTopicRequestIdea').value;
     const descriptionInput = e.target.querySelector('#newTopicRequestDescription').value;
     const upvotes = 0;
