@@ -79,7 +79,11 @@ class DOMElements {
   // ---------> Start topic request row elements
 
   static createUserRow() {
-    this.mainBody.innerHTML += `<div class="row row-cols-3 py-5 my-5 px-5" id="user-row"></div>`;
+    this.mainBody.innerHTML += `
+      <div class="row mt-5" id="user-row-header">
+        <div class="col text-center">My Code Talk Topic Ideas</div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4" id="user-row"></div>`;
   }
   
   static get userRow() {
@@ -88,7 +92,11 @@ class DOMElements {
   }
 
   static createAllOtherRow() {
-    this.mainBody.innerHTML += `<div class="row row-cols-3 py-5 my-5 px-5" id="all-other-row"></div>`;
+    this.mainBody.innerHTML += `
+      <div class="row mt-5" id="all-other-row-header">
+        <div class="col text-center">My Codepanions' Code Talk Topic Ideas</div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4" id="all-other-row"></div>`;
   }
   
   static get allOtherRow() {
@@ -153,6 +161,15 @@ class DOMElements {
   }
 
   // ---------> End new topic request modal and form
+
+  static createLogoutButton() {
+    this.navMenu.innerHTML += `<button type="button" class="btn btn-dark ml-3" id="logoutButton">Log Out</button>`;
+  }
+
+  static get logoutButton() {
+    this.createlogoutButton();
+    return document.getElementById('logoutButton');
+  }
 
 }
 

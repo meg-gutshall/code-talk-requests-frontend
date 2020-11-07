@@ -19,6 +19,7 @@ async function autoRedirect() {
   if (validLogin) {
     renderTopicRequests(REQS_URL);
     addNewTopicRequestButton();
+    DOMElements.createLogoutButton();
   } else {
     showLoginForm();
   }
@@ -72,6 +73,7 @@ function addNewTopicRequestButton() {
   function renderNewTopicRequestButton() {
     DOMElements.modalButton;
     DOMElements.topicRequestModal;
+    // Await the creation of the above elements to submit
     let newTopicRequestForm = document.getElementById('newTopicRequestForm');
     newTopicRequestForm.addEventListener('submit', e => newTopicRequestFormHandler(e));
   }
