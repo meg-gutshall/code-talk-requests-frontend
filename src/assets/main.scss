@@ -1,3 +1,50 @@
 @import 'variables';
 @import 'bootstrap/scss/bootstrap';
-@import 'custom';
+@import 'custom';@import 'variables';
+@import 'bootstrap/scss/bootstrap';
+
+// My custom styling here
+
+#user-row {
+  background-color: $silver-pink;
+  padding: 0 3rem 3rem 3rem;
+  margin-bottom: 3rem;
+}
+
+#user-row-header {
+  background-color: $silver-pink;
+  color: $white;
+  font-size: 3rem;
+  padding: 2rem 0;
+}
+
+#all-other-row {
+  background-color: $old-lavender;
+  padding: 0 3rem 3rem 3rem;
+  margin-bottom: 1.5rem;
+}
+
+#all-other-row-header {
+  background-color: $old-lavender;
+  color: $white;
+  font-size: 3rem;
+  padding: 2rem 0;
+}
+
+.btn-secondary {
+  color: $white;
+}
+
+.card-footer {
+  background-color: $apricot;
+}
+
+.card-footer > #upvote.btn {
+  display: block;
+}
+
+.card-footer > #upvote-count {
+  display: inline-block;
+  margin: 0;
+  vertical-align: bottom;
+}
