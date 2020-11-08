@@ -70,10 +70,14 @@ function renderTopicRequests(REQS_URL) {
 function addNewTopicRequestButton() {
   let current_user = localStorage.getItem('current_user');
 
-  function renderNewTopicRequestButton() {
+  async function createModalElements() {
     DOMElements.modalButton;
     DOMElements.topicRequestModal;
-    // Await the creation of the above elements to submit
+  }
+
+  async function renderNewTopicRequestButton() {
+    await createModalElements();
+    // Await the creation of the modal elements to submit
     let newTopicRequestForm = document.getElementById('newTopicRequestForm');
     newTopicRequestForm.addEventListener('submit', e => newTopicRequestFormHandler(e));
   }
