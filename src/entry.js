@@ -3,7 +3,7 @@ import 'bootstrap/dist/js/bootstrap';
 import '@fortawesome/fontawesome-free/js/all.js';
 import DOMElements from './services/domElements';
 import TopicRequest from './models/topicRequest';
-import { isLoggedIn, showLoginForm } from './services/authorization';
+import { isLoggedIn, showLoginForm, renderLogoutButton } from './services/authorization';
 
 const BASE_URL = "http://localhost:3000/api/v1/"
 const REQS_URL = `${BASE_URL}topic_requests`
@@ -19,7 +19,7 @@ async function autoRedirect() {
   if (validLogin) {
     renderTopicRequests(REQS_URL);
     addNewTopicRequestButton();
-    DOMElements.createLogoutButton();
+    renderLogoutButton();
   } else {
     showLoginForm();
   }

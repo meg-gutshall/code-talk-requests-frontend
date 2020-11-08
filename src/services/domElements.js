@@ -162,6 +162,9 @@ class DOMElements {
 
   // ---------> End new topic request modal and form
 
+
+  // ---------> Start logout button
+
   static createLogoutButton() {
     this.navMenu.innerHTML += `<button type="button" class="btn btn-dark ml-3" id="logoutButton">Log Out</button>`;
   }
@@ -169,6 +172,13 @@ class DOMElements {
   static get logoutButton() {
     this.createlogoutButton();
     return document.getElementById('logoutButton');
+  }
+
+  // ---------> End logout button
+
+
+  static removeNavMenuButtons() {
+    this.navMenu.innerHTML = `<a class="navbar-brand flex-grow-1" href="#">Code Talk</a>`;
   }
 
 }

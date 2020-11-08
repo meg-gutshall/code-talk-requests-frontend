@@ -49,10 +49,17 @@ async function isLoggedIn() {
   }
 }
 
-// Logout
-// function logoutAction() {
-//   localStorage.removeItem('jwt_token');
-//   localStorage.removeItem('current_user');
-// }
+function renderLogoutButton() {
+  DOMElements.createLogoutButton();
+  let logoutButton = document.getElementById('logoutButton');
+  logoutButton.addEventListener('click', e => logout(e));
+}
 
-export { isLoggedIn, showLoginForm };
+// Logout
+function logout() {
+  localStorage.clear();
+  autoRedirect();
+  DOMElements.removeNavMenuButtons();
+}
+
+export { isLoggedIn, showLoginForm, renderLogoutButton };
