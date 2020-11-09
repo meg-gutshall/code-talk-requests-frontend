@@ -18,7 +18,7 @@ class TopicRequest {
           </div>
           <div class="card-footer clearfix">
             <p class="card-text float-left" id="upvote-count">${this.upvotes} Upvotes</p>
-            <button type="submit" class="btn btn-primary float-right" id="upvote"><i class="fas fa-angle-up fa-lg"></i></button>
+            <button type="submit" class="btn btn-primary float-right" id="upvote">+1</button>
           </div>
         </div>
       </div>
