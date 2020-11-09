@@ -48,7 +48,7 @@ Break instructions down by operating system if necessary -->
 
 #### Ruby
 
-Code Talk uses Ruby version 2.7.0. In my opinion, the best way to install Ruby is by using a Ruby version management system. The two most popular tools for this are [RVM](https://rvm.io/) and [rbenv](https://github.com/rbenv/rbenv). I've used both and have found rbenv to be more well-documented and easier to navigate than RVM but the ultimate choice is yours.
+Code Talks uses Ruby version 2.7.0. In my opinion, the best way to install Ruby is by using a Ruby version management system. The two most popular tools for this are [RVM](https://rvm.io/) and [rbenv](https://github.com/rbenv/rbenv). I've used both and have found rbenv to be more well-documented and easier to navigate than RVM but the ultimate choice is yours.
 
 Since I use rbenv, I'm going to walk you through that installation. (_**NOTE:** If you decide to install rbenv and you used to use RVM, you must remove all RVM files or rbenv will **not** work!_)
 
@@ -83,17 +83,17 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor 
 ```
 
 **NOW we install RUBY!**
-In your terminal, type `rbenv install 2.7.0` to download the version of Ruby you'll need to run Code Talk.
+In your terminal, type `rbenv install 2.7.0` to download the version of Ruby you'll need to run Code Talks.
 
-Once it's done installing, navigate to the Code Talk directory and type `rbenv local 2.7.0` to set your local environment's Ruby version. Then type `rbenv rehash`.
+Once it's done installing, navigate to the Code Talks directory and type `rbenv local 2.7.0` to set your local environment's Ruby version. Then type `rbenv rehash`.
 
 #### PostgreSQL
 
-The database for Code Talk is PostgreSQL version 12.3. [Click this link](https://www.postgresql.org/download/) to visit PostgreSQL's official site and select your operating system in order to download the right package. There's one option available for Windows users. As a Mac user, I originally used Homebrew as my download option, but after trying Postgres.app, I found it to be much more simple and user-friendly. There are plenty of options for other server types, but I have no experience using any of them.
+The database for Code Talks is PostgreSQL version 12.3. [Click this link](https://www.postgresql.org/download/) to visit PostgreSQL's official site and select your operating system in order to download the right package. There's one option available for Windows users. As a Mac user, I originally used Homebrew as my download option, but after trying Postgres.app, I found it to be much more simple and user-friendly. There are plenty of options for other server types, but I have no experience using any of them.
 
 #### Bundler
 
-Code Talk uses [Bundler](https://bundler.io/) to manage the Ruby Gems packaged in the app. Installing Bundler is as simple as opening a new terminal window and typing `gem install bundler` and you're ready to go!
+Code Talks uses [Bundler](https://bundler.io/) to manage the Ruby Gems packaged in the app. Installing Bundler is as simple as opening a new terminal window and typing `gem install bundler` and you're ready to go!
 
 ### Installation
 
