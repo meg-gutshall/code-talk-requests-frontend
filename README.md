@@ -1,4 +1,4 @@
-# Code Talk Session Request Platform
+# Code Talks Topic Request Platform
 
 ## Description
 
