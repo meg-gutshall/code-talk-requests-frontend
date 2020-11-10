@@ -48,26 +48,14 @@ function renderTopicRequests(REQS_URL) {
     let allRequests = await topicRequests.data.forEach(topicRequest => {
       const newTopicRequest = new TopicRequest(topicRequest, topicRequest.attributes);
       if (newTopicRequest.codepanionId == parseInt(current_user)) {
-        renderUserTopicRequests(newTopicRequest);
+        newTopicRequest.renderTopicRequests('user-row');
       } else {
-        renderAllOtherTopicRequests(newTopicRequest);
+        newTopicRequest.renderTopicRequests('all-other-row');
       }
     })
     return allRequests;
   }
-  
-  function renderUserTopicRequests(newTopicRequest) {
-    let userRow = document.getElementById('user-row');
-    let userCol = newTopicRequest.createTopicRequestCard();
-    userRow.innerHTML += userCol;
-  }
-  
-  function renderAllOtherTopicRequests(newTopicRequest) {
-    let allOtherRow = document.getElementById('all-other-row');
-    let allOtherCol = newTopicRequest.createTopicRequestCard();
-    allOtherRow.innerHTML += allOtherCol;
-  }
-  
+
   fetchTopicRequests(REQS_URL);
 }
 
@@ -112,11 +100,7 @@ function addNewTopicRequestButton() {
       .then(resp => resp.json())
       .then( postedTopicRequest => {
         const newTopicRequest = new TopicRequest(postedTopicRequest.topic_request.data, postedTopicRequest.topic_request.data.attributes);
-        
-        // renderUserTopicRequests()
-        let userRow = document.getElementById('user-row');
-        let userCol = newTopicRequest.createTopicRequestCard();
-        userRow.innerHTML += userCol;
+        newTopicRequest.renderTopicRequests('user-row');
       })
   }
 

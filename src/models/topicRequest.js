@@ -25,6 +25,12 @@ class TopicRequest {
     `
   }
 
+  renderTopicRequests(elementId) {
+    let row = document.getElementById(elementId);
+    let col = this.createTopicRequestCard();
+    row.innerHTML += col;
+  }
+
   static findTopicRequest(id) {
     return this.all.find((topicRequest) => topicRequest.id === id)
   }
