@@ -34,6 +34,7 @@ async function login(email_address, password) {
   };
   const loginResponse = await fetch(LOGIN_URL, newLoginSubmission);
   const userData = await loginResponse.json();
+  // TODO: Check for error message response and handle error here
   localStorage.setItem('jwt_token', userData.jwt);
   localStorage.setItem('current_user', userData.user.data.id);
   DOMElements.mainBody.innerHTML = "";
@@ -42,11 +43,12 @@ async function login(email_address, password) {
 // Check if user is logged in
 async function isLoggedIn() {
   let token = localStorage.getItem('jwt_token');
-  if (!token) {
-    return false
-  } else {
-    return true
-  }
+  return !!token && token !== "undefined"
+  // if (!token || token === "undefined") {
+  //   return false
+  // } else {
+  //   return true
+  // }
 }
 
 function renderLogoutButton() {
