@@ -18,175 +18,148 @@ Like many developers, I have a love of learning and am intrigued by several tech
 4. Simply select the "New Topic Request" button, complete the "Topic Request Idea" and "Topic Request Description" fields, and click "Create" to see a new topic request card added to your list of requests.
 5. Select "Log Out" when finished.
 
-## Getting Started
+## Build Status and Code Style
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+>Build status of continuous integration (travis, appveyor, etc.) and code style (xo, standard etc.). This will help others who wish to contribute to your project. You can include badges here as well, just don't go too crazy or it looks like a mess.
 
-### Prerequisites
+## Table of Contents
 
-<!-- What things you need to install the software and how to install them
+>Depending on how long the `README` is, add in a ToC or even abstract some sections away to different markdown files (i.e. `CONTRIBUTING.md`, `USAGE.md`, etc.).
 
-#### Software Name
+## Screenshots/Demo
 
-Links to resources and installation instructions
-
-```
-Give examples
-```
-
-##### For Mac Users
-
-Break instructions down by operating system if necessary
-
-##### For Windows Users
-
-Break instructions down by operating system if necessary
-
-##### For Linux Users
-
-Break instructions down by operating system if necessary -->
-
-#### Ruby
-
-Code Talks uses Ruby version 2.7.0. In my opinion, the best way to install Ruby is by using a Ruby version management system. The two most popular tools for this are [RVM](https://rvm.io/) and [rbenv](https://github.com/rbenv/rbenv). I've used both and have found rbenv to be more well-documented and easier to navigate than RVM but the ultimate choice is yours.
-
-Since I use rbenv, I'm going to walk you through that installation. (_**NOTE:** If you decide to install rbenv and you used to use RVM, you must remove all RVM files or rbenv will **not** work!_)
-
-##### For Mac Users
-
-If you haven't done so already, download **[Homebrew](https://brew.sh/)**. It's an amazing macOS package manager that's built with Ruby. Just paste the following script in a new terminal window:
-
-```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
-It will run through the installation, and explain the steps the script is taking along the way.
-
-Once Homebrew is installed (or if you already had it installed, you smarty pants!), it's time to install rbenv. Open a new terminal window running `bash` or `zsh` and `cd` into your home path (i.e. `Users/yourname/`). Now type `brew install rbenv` _*Note: This command also installs `ruby-build`, so you'll be ready to install other Ruby versions out of the box._ Once rbenv is done installing, type `rbenv init` to begin the shell integration setup.
-
-##### For Windows and Linux Users
-
-To install rbenv on your system, open up a new window in your terminal and run the `rbenv-installer` script below which can also be found at [this link](https://github.com/rbenv/rbenv-installer#rbenv-installer):
-
-```bash
-curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
-```
-
-It will either install rbenv on your system or update your pre-existing version of rbenv, located under `~/.rbenv`. Additionally, [ruby-build](https://github.com/rbenv/ruby-build) is also installed if rbenv install is not already available.
-
-##### For All Users
-
-Restart your terminal for the installation changes to take effect. Make sure your setup is correct by running the `rbenv-doctor` script below which can also be found at [this link](https://github.com/rbenv/rbenv-installer#rbenv-installer):
-
-```bash
-curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
-```
-
-**NOW we install RUBY!**
-In your terminal, type `rbenv install 2.7.0` to download the version of Ruby you'll need to run Code Talks.
-
-Once it's done installing, navigate to the Code Talks directory and type `rbenv local 2.7.0` to set your local environment's Ruby version. Then type `rbenv rehash`.
-
-#### PostgreSQL
-
-The database for Code Talks is PostgreSQL version 12.3. [Click this link](https://www.postgresql.org/download/) to visit PostgreSQL's official site and select your operating system in order to download the right package. There's one option available for Windows users. As a Mac user, I originally used Homebrew as my download option, but after trying Postgres.app, I found it to be much more simple and user-friendly. There are plenty of options for other server types, but I have no experience using any of them.
-
-#### Bundler
-
-Code Talks uses [Bundler](https://bundler.io/) to manage the Ruby Gems packaged in the app. Installing Bundler is as simple as opening a new terminal window and typing `gem install bundler` and you're ready to go!
-
-### Installation
-
-<!-- A step by step series of examples that tell you how to get a development env running -->
-
-Fork [this repository](<!-- link to repo -->) from GitHub and clone your forked copy down to your computer. Open a new terminal window and `cd` into the <!-- `repo name` --> root directory.
-
-List any other actions needed to be taken before starting up the server.
-
-<!-- **Steps for a Ruby on Rails app with PostgreSQL**
-Create a new file by typing `touch .env` and input the following text into this file:
-
-```
-POSTGRES_USER=YOUR_USERNAME
-POSTGRES_PASSWORD=YOUR_PASSWORD
-POSTGRES_HOST='localhost'
-POSTGRES_DB='[repo-name]'
-POSTGRES_TEST_DB='[repo-name]_test'
-```
-
-Replace `YOUR_USERNAME` with your computer's username—the name used in your terminal's root path (`$PATH`), or what you see when you type `PWD` in your terminal (i.e. `Users/yourname/`)—in single quotes and `YOUR_PASSWORD` with whatever you want it to be, again in single quotes.
-
-Type `bundle install` into the terminal to load all of the Ruby Gems and dependencies into your app. Start up the PostgreSQL server and type `rails db:setup` into the terminal. This allows PostgreSQL to create two new databases (development and test) using the `.env` file you just created in the [App Name] app (in addition to pre-existing configurations). Next, type `rails db:migrate`. This step runs the table migrations in the app, which gives the database instructions on what kind of data it should look to receive and to which models and attributes the data corresponds.
-
-To start up the Rails server, which is in charge of rendering your app on the web, therefore allowing users to interact with it, type `rails s` in the terminal. You should now be able to open up a new browser window and navigate to [http://localhost:3000/](http://localhost:3000/) and see the [App Name] homepage displayed. From there, either log in or sign up and have fun!
-
-When you're done, just type `Ctrl + C` in the terminal to stop your Rails session and remember to also shut down your PostgreSQL server. If you'd like to reset the database to delete any objects you've created and start over fresh, type `rails db:reset` into the terminal. -->
-
-## Usage
-
-<!-- End with an example of getting some data out of the system or using it for a little demo -->
-
-<!-- **If I have a demo video**
-I recorded a quick demo video (below) on how to use [App Name].
-
-[![[App Name] demo video](https://img.youtube.com/vi/[link to YouTube video]/0.jpg)](https://youtu.be/[link to YouTube video]) -->
-
-<!-- **Steps for a Ruby on Rails app with PostgreSQL**
-I also created a seed file which holds randomized data to use specifically for app development and testing purposes. If you'd like to explore [App Name] with data preloaded into the database, type `rails db:seed` in the terminal and log in using the following credentials:
-
-```
-[credentials here]
-``` -->
-
-## Tests
-
-<!-- Explain how to run the automated tests for this system -->
-
-### End to End Tests
-
-<!-- Explain what these tests test and why
-
-```
-Give an example
-``` -->
-
-### Coding Style Tests
-
-<!-- Explain what these tests test and why
-
-```
-Give an example
-``` -->
-
-## Deployment
-
-<!-- Add additional notes about how to deploy this on a live system -->
+>Include logo, demo, screenshot etc.
 
 ## Built With
 
-<!-- * [Ruby](https://www.ruby-lang.org/en/) - The programming language used
-* [Rails](https://rubyonrails.org/) and [ActiveRecord](https://apidock.com/rails/ActiveRecord/Base) - The Ruby frameworks used
-* [PostgreSQL](https://www.postgresql.org/) - The relational database used
-* [Devise](http://devise.plataformatec.com.br/) - The user authentication system
-* [Bootstrap 4](https://getbootstrap.com/) and [GoogleFonts](https://fonts.google.com/) - The styling tools used
-* And don't forget good old HTML5 and CSS3! <3 -->
+>List of tech languages, frameworks/libraries, and tools used
+
+- [Language](link to language documentation)
+- [Framework](link to framework documentation)
+- [Database](link to database documentation)
+
+## Features
+
+>What makes your project stand out? What pain points does it solve for the prospective user? Compare it to competitor apps/tools to show how it is different/better.
+
+## Example Code
+
+>Show what your code does as concisely as possible. Users should be able to figure out **how** your project solves their problem by looking at the example.
+>Also include the example code as a file in your repo (named `example.js` or in an `example` directory) so that users can run the code if they clone down the repository.
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+>List which technologies the user needs to install the software and how to install these dependencies.
+
+#### <Software Name>
+
+>Links to resources and installation instructions. Include code examples. Break instructions down by operating system if necessary.
+
+<!-- ##### For Mac Users -->
+
+<!-- ##### For Windows Users -->
+
+<!-- ##### For Linux Users -->
+
+### Installation
+
+>This section tells the user how to get a local environment running. Be sure to include specific step-by-step instructions for the installation process to accommodate coders of all levels.
+>This section will vary greatly depending on the type of code the repository contains. For example, a Node package is usually installed by typing `npm install <package-name>` in the terminal, whereas other projects you may have to fork and clone down the repository. In both cases the user needs to have the requisite technology installed to run to code. Even with a Docker image, the user still needs to be able to run Docker on their machine.
+>Keep this in mind when writing out the "Prerequisites" and "Installation" sections.
+
+## API Reference/Documentation
+
+>Depending on the size of the project, if it is small and simple enough the reference docs can be added to the `README`. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
+
+## Tests
+
+>Explain how to run the automated tests for this system.
+
+### End to End Tests
+
+>Explain what these tests test and why. Include code examples.
+
+### Coding Style Tests
+
+>Explain what these tests test and why. Include code examples.
+
+## Deployment
+
+>Add additional notes about how to deploy this on a live system.
+
+## Usage
+
+>End with an example of getting some seed data out of the system or using it for a demo. Add screenshots, video links, and/or GIFs in this section to make your usage instructions as clear as possible to the user.
 
 ## Contributing
 
-Issues and pull requests are welcome at [<!-- link to repo -->](<!-- link to repo -->). This project as well as all other content on my GitHub are intended to be safe, welcoming, and open for collaboration. Users are expected to adhere to the [Contributor Covenant code of conduct](https://www.contributor-covenant.org/version/1/4/code-of-conduct) and those that do not will be reported and blocked. I got no time for that nonsense.
+>Add more detailed instructions for open-source projects. It's a good idea to include a code of conduct as well as resource links as to where absolute beginners can go to learn how to contribute to open source. [Here's a great place to start.][Open Source Guides]
+>I personally like the Contributor Covenant and use the below statement as my default. I intend to expand on it once I create an open-source project truly worthy of others' contributions.
+
+Issues and pull requests are welcome at [<!-- repo title -->](<!-- link to repo -->). This project as well as all other content on my GitHub are intended to be safe, welcoming, and open for collaboration. Users are expected to adhere to the [Contributor Covenant code of conduct](https://www.contributor-covenant.org/version/1/4/code-of-conduct) and those that do not will be reported and blocked. I got no time for that nonsense.
 
 ## Authors
 
+>Include your name and any links to your social media, contact info, or websites that you'd like. Don't forget to s/o your contributors here too!
+
 **[Meg Gutshall](https://github.com/meg-gutshall/)**
 
-<!-- See also the list of [contributors]([link to repo/contributors]) who participated in this project. -->
+See also the list of [contributors](#contributors) who participated in this project.
+
+## Contributors
+
+>Add a list of contributors here. You may want to feature some who have really stood out.
 
 ## Acknowledgments
 
-<!-- * Hat tip to anyone whose code was used
-* Inspiration
-* Anything else that seems useful -->
+>- Hat tip to anyone whose code was used
+>- Inspiration
+>- Anything else that seems useful
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+>Include your license here. This is an absolute **must** as some users require that all services they include in their project have a license that matches their own. The MIT License is GitHub's recommendation and probably the most common one you'll see in repos, but there are [other options available][Choose an Open Source License]—copy*left*, anybody?—and that's not even an exhaustive list, just the most popular licenses on GitHub.
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+---
+
+## Template Resources
+
+### Articles About Writing READMEs
+
+- [A Beginner's Guide to Writing a Kickass README][A Beginner's Guide to Writing a Kickass README]: A short and sweet summary with many examples at the end.
+- [Art of README][Art of README]: An informational repo on the what and why behind `README`s.
+
+[A Beginner's Guide to Writing a Kickass README]: https://medium.com/@meakaakka/a-beginners-guide-to-writing-a-kickass-readme-7ac01da88ab3
+[Art of README]: https://github.com/noffle/art-of-readme
+
+### README Templates that Won the Meg Stamp of Approval
+
+- [Standard README][Standard README]: I like the simplicity with the extensive use of links.
+- [Open-Source Template][Open-Source Template]: Figured I'd throw this in here in case it comes in handy for anyone.
+- [Awesome README][Awesome README]: Another Awesome List—`README` Edition.
+
+[Standard README]: https://github.com/richardlitt/standard-readme
+[Open-Source Template]: https://github.com/davidbgk/open-source-template/
+[Awesome README]: https://github.com/matiassingers/awesome-readme
+
+### Repository Licenses
+
+- [Choose an Open Source License][Choose an Open Source License]: A non-exhaustive list of licenses curated by GitHub.
+- [Searching GitHub by License Type][Searching GitHub by License Type]: You can filter repositories based on their license or license family using the `license` qualifier and the exact license keyword
+- [The Legal Side of Open Source][The Legal Side of Open Source]: Everything you've ever wondered about the legal side of open source, and a few things you didn't.
+
+[Choose an Open Source License]: https://choosealicense.com/
+[Searching GitHub by License Type]: https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/licensing-a-repository#searching-github-by-license-type
+[The Legal Side of Open Source]: https://opensource.guide/legal/
+
+### Open Source
+
+- [Open Source Guides][Open Source Guides]: Open source software is made by people just like you. Learn how to launch and grow your project.
+
+[Open Source Guides]: https://opensource.guide/
