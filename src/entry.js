@@ -30,10 +30,15 @@ async function autoRedirect() {
 // This occurs after successful login
 function renderTopicRequests(REQS_URL) {
   let current_user = localStorage.getItem('current_user');
-  DOMElements.userRow;
-  DOMElements.allOtherRow;
+
+  async function createRowElements() {
+    DOMElements.userRow;
+    DOMElements.allOtherRow;
+  }
 
   async function fetchTopicRequests(url) {
+    await createRowElements();
+    // Await the creation of the row elements to render
     const jwtGetFetchOptions = {
       method: 'GET',
       headers: {Authorization: `Bearer ${localStorage.getItem('jwt_token')}`}
