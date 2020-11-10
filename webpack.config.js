@@ -64,7 +64,7 @@ const config = {
     new CleanWebpackPlugin(),
     new ManifestPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Code Talk Requests',
+      title: 'Code Talks Topic Request Platform',
       template: 'template.html',
       scriptLoading: 'defer',
       meta: {

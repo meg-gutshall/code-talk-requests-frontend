@@ -24,7 +24,7 @@ class DOMElements {
       `<form class="mt-5" id="login-form">
         <div class="form-row justify-content-center">
           <div class="col-9 text-center mb-2">
-            <h1>Welcome to the Code Talk online learning platform!</h1>
+            <h1>Welcome to the Code Talks online learning platform!</h1>
           </div>
         </div>
         <div class="form-row justify-content-center">
@@ -81,7 +81,7 @@ class DOMElements {
   static createUserRow() {
     this.mainBody.innerHTML += `
       <div class="row mt-5" id="user-row-header">
-        <div class="col text-center">My Code Talk Topic Ideas</div>
+        <div class="col text-center">My Code Talks Topic Ideas</div>
       </div>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4" id="user-row"></div>`;
   }
@@ -94,7 +94,7 @@ class DOMElements {
   static createAllOtherRow() {
     this.mainBody.innerHTML += `
       <div class="row mt-5" id="all-other-row-header">
-        <div class="col text-center">My Codepanions' Code Talk Topic Ideas</div>
+        <div class="col text-center">My Codepanions' Code Talks Topic Ideas</div>
       </div>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4" id="all-other-row"></div>`;
   }
@@ -178,7 +178,7 @@ class DOMElements {
 
 
   static removeNavMenuButtons() {
-    this.navMenu.innerHTML = `<a class="navbar-brand flex-grow-1" href="#">Code Talk</a>`;
+    this.navMenu.innerHTML = `<a class="navbar-brand flex-grow-1" href="#">Code Talks</a>`;
   }
 
 }
