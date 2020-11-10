@@ -86,7 +86,7 @@ function addNewTopicRequestButton() {
     let newTopicRequestForm = document.getElementById('newTopicRequestForm');
     newTopicRequestForm.addEventListener('submit', e => newTopicRequestFormHandler(e));
   }
-  
+
   function newTopicRequestFormHandler(e) {
     const ideaInput = e.target.querySelector('#newTopicRequestIdea').value;
     const descriptionInput = e.target.querySelector('#newTopicRequestDescription').value;
@@ -110,7 +110,7 @@ function addNewTopicRequestButton() {
     };
     fetch(REQS_URL, newTopicRequestSubmission)
       .then(resp => resp.json())
-      .then(function(postedTopicRequest) {
+      .then( postedTopicRequest => {
         const newTopicRequest = new TopicRequest(postedTopicRequest.topic_request.data, postedTopicRequest.topic_request.data.attributes);
         
         // renderUserTopicRequests()
