@@ -15,7 +15,7 @@ async function loginFormHandler(e) {
   const passwordInput = e.target.querySelector('#user-password').value;
   await login(emailInput, passwordInput);
   autoRedirect();
-  // Check here for CORRECT login credentials by calling autoRedirect again
+  // Check here for correct login credentials by calling autoRedirect again
 }
 
 // Auth help article
@@ -44,11 +44,6 @@ async function login(email_address, password) {
 async function isLoggedIn() {
   let token = localStorage.getItem('jwt_token');
   return !!token && token !== "undefined"
-  // if (!token || token === "undefined") {
-  //   return false
-  // } else {
-  //   return true
-  // }
 }
 
 function renderLogoutButton() {
@@ -62,6 +57,7 @@ function logout() {
   localStorage.clear();
   autoRedirect();
   DOMElements.removeNavMenuButtons();
+  // Trigger logout fetch function here to logout on the backend as well
 }
 
 export { isLoggedIn, showLoginForm, renderLogoutButton };
