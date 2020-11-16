@@ -16,13 +16,9 @@ Like many developers, I have a love of learning and am intrigued by several tech
 4. Simply select the "New Topic Request" button, complete the "Topic Request Idea" and "Topic Request Description" fields, and click "Create" to see a new topic request card added to your list of requests.
 5. Select "Log Out" when finished.
 
-## Table of Contents
+## Demo
 
-Depending on how long the `README` is, add in a ToC or even abstract some sections away to different markdown files (i.e. `CONTRIBUTING.md`, `USAGE.md`, etc.).
-
-## Screenshots/Demo
-
-Include logo, demo, screenshot etc.
+[![Demo video](https://img.youtube.com/vi/xRKItzdbQwk/0.jpg)](https://youtu.be/xRKItzdbQwk)
 
 ## Built With
 
