@@ -22,11 +22,11 @@ Like many developers, I have a love of learning and am intrigued by several tech
 
 ## Built With
 
-List of tech languages, frameworks/libraries, and tools used
-
-- [Language](link to language documentation)
-- [Framework](link to framework documentation)
-- [Database](link to database documentation)
+- [JavaScript](https://javascript.info/) - The programming language used
+- [Webpack](https://webpack.js.org/) - The static module bundle used for the JavaScript code
+- [npm](https://www.npmjs.com/) - The package management system used
+- [Bootstrap 4](https://getbootstrap.com/), [FontAwesome](https://fontawesome.com/), and [Sass](https://sass-lang.com/) - The styling tools used
+- And don't forget good old HTML5 and CSS3! <3
 
 ## Features
 
