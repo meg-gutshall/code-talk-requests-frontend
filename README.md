@@ -16,11 +16,11 @@ Like many developers, I have a love of learning and am intrigued by several tech
 4. Simply select the "New Topic Request" button, complete the "Topic Request Idea" and "Topic Request Description" fields, and click "Create" to see a new topic request card added to your list of requests.
 5. Select "Log Out" when finished.
 
-This repository is the companion to [the backend repo][Code Talk Requests Backend].
+This repository is the companion to [the backend repo][Code Talk Requests Backend]. If you're not familiar with
 
 ## Demo
 
-[![Demo video](https://img.youtube.com/vi/xRKItzdbQwk/0.jpg)](https://youtu.be/xRKItzdbQwk)
+[![Demo video](https://img.youtube.com/vi/z1_PU_QzOJI/0.jpg)](https://youtu.be/z1_PU_QzOJI)
 
 ## Built With
 
