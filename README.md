@@ -18,15 +18,15 @@ Like many developers, I have a love of learning and am intrigued by several tech
 
 ## Table of Contents
 
->Depending on how long the `README` is, add in a ToC or even abstract some sections away to different markdown files (i.e. `CONTRIBUTING.md`, `USAGE.md`, etc.).
+Depending on how long the `README` is, add in a ToC or even abstract some sections away to different markdown files (i.e. `CONTRIBUTING.md`, `USAGE.md`, etc.).
 
 ## Screenshots/Demo
 
->Include logo, demo, screenshot etc.
+Include logo, demo, screenshot etc.
 
 ## Built With
 
->List of tech languages, frameworks/libraries, and tools used
+List of tech languages, frameworks/libraries, and tools used
 
 - [Language](link to language documentation)
 - [Framework](link to framework documentation)
@@ -34,12 +34,12 @@ Like many developers, I have a love of learning and am intrigued by several tech
 
 ## Features
 
->What makes your project stand out? What pain points does it solve for the prospective user? Compare it to competitor apps/tools to show how it is different/better.
+What makes your project stand out? What pain points does it solve for the prospective user? Compare it to competitor apps/tools to show how it is different/better.
 
 ## Example Code
 
->Show what your code does as concisely as possible. Users should be able to figure out **how** your project solves their problem by looking at the example.
->Also include the example code as a file in your repo (named `example.js` or in an `example` directory) so that users can run the code if they clone down the repository.
+Show what your code does as concisely as possible. Users should be able to figure out **how** your project solves their problem by looking at the example.
+Also include the example code as a file in your repo (named `example.js` or in an `example` directory) so that users can run the code if they clone down the repository.
 
 ## Getting Started
 
@@ -47,11 +47,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
->List which technologies the user needs to install the software and how to install these dependencies.
+List which technologies the user needs to install the software and how to install these dependencies.
 
 #### <Software Name>
 
->Links to resources and installation instructions. Include code examples. Break instructions down by operating system if necessary.
+Links to resources and installation instructions. Include code examples. Break instructions down by operating system if necessary.
 
 <!-- ##### For Mac Users -->
 
@@ -61,13 +61,13 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installation
 
->This section tells the user how to get a local environment running. Be sure to include specific step-by-step instructions for the installation process to accommodate coders of all levels.
->This section will vary greatly depending on the type of code the repository contains. For example, a Node package is usually installed by typing `npm install <package-name>` in the terminal, whereas other projects you may have to fork and clone down the repository. In both cases the user needs to have the requisite technology installed to run to code. Even with a Docker image, the user still needs to be able to run Docker on their machine.
->Keep this in mind when writing out the "Prerequisites" and "Installation" sections.
+This section tells the user how to get a local environment running. Be sure to include specific step-by-step instructions for the installation process to accommodate coders of all levels.
+This section will vary greatly depending on the type of code the repository contains. For example, a Node package is usually installed by typing `npm install <package-name>` in the terminal, whereas other projects you may have to fork and clone down the repository. In both cases the user needs to have the requisite technology installed to run to code. Even with a Docker image, the user still needs to be able to run Docker on their machine.
+Keep this in mind when writing out the "Prerequisites" and "Installation" sections.
 
 ## Usage
 
->End with an example of getting some seed data out of the system or using it for a demo. Add screenshots, video links, and/or GIFs in this section to make your usage instructions as clear as possible to the user.
+End with an example of getting some seed data out of the system or using it for a demo. Add screenshots, video links, and/or GIFs in this section to make your usage instructions as clear as possible to the user.
 
 ## Contributing
 
@@ -79,9 +79,9 @@ Issues and pull requests are welcome at [this repository](https://github.com/meg
 
 ## Acknowledgments
 
->- Hat tip to anyone whose code was used
->- Inspiration
->- Anything else that seems useful
+- Hat tip to anyone whose code was used
+- Inspiration
+- Anything else that seems useful
 
 ## License
 
