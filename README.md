@@ -75,8 +75,6 @@ Issues and pull requests are welcome at [this repository](https://github.com/meg
 
 ## Authors
 
->Include your name and any links to your social media, contact info, or websites that you'd like. Don't forget to s/o your contributors here too!
-
 **[Meg Gutshall](https://github.com/meg-gutshall/)**
 
 ## Acknowledgments
