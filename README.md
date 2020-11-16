@@ -16,6 +16,8 @@ Like many developers, I have a love of learning and am intrigued by several tech
 4. Simply select the "New Topic Request" button, complete the "Topic Request Idea" and "Topic Request Description" fields, and click "Create" to see a new topic request card added to your list of requests.
 5. Select "Log Out" when finished.
 
+This repository is the companion to [the backend repo][Code Talk Requests Backend].
+
 ## Demo
 
 [![Demo video](https://img.youtube.com/vi/xRKItzdbQwk/0.jpg)](https://youtu.be/xRKItzdbQwk)
@@ -69,3 +71,5 @@ Issues and pull requests are welcome at [this repository](https://github.com/meg
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+[Code Talk Requests Frontend]: https://github.com/meg-gutshall/code-talk-requests-frontend
