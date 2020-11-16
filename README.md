@@ -116,8 +116,6 @@ See also the list of [contributors](#contributors) who participated in this proj
 
 ## License
 
->Include your license here. This is an absolute **must** as some users require that all services they include in their project have a license that matches their own. The MIT License is GitHub's recommendation and probably the most common one you'll see in repos, but there are [other options available][Choose an Open Source License]—copy*left*, anybody?—and that's not even an exhaustive list, just the most popular licenses on GitHub.
-
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ---
