@@ -65,26 +65,6 @@ These instructions will get you a copy of the project up and running on your loc
 >This section will vary greatly depending on the type of code the repository contains. For example, a Node package is usually installed by typing `npm install <package-name>` in the terminal, whereas other projects you may have to fork and clone down the repository. In both cases the user needs to have the requisite technology installed to run to code. Even with a Docker image, the user still needs to be able to run Docker on their machine.
 >Keep this in mind when writing out the "Prerequisites" and "Installation" sections.
 
-## API Reference/Documentation
-
->Depending on the size of the project, if it is small and simple enough the reference docs can be added to the `README`. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
-
-## Tests
-
->Explain how to run the automated tests for this system.
-
-### End to End Tests
-
->Explain what these tests test and why. Include code examples.
-
-### Coding Style Tests
-
->Explain what these tests test and why. Include code examples.
-
-## Deployment
-
->Add additional notes about how to deploy this on a live system.
-
 ## Usage
 
 >End with an example of getting some seed data out of the system or using it for a demo. Add screenshots, video links, and/or GIFs in this section to make your usage instructions as clear as possible to the user.
@@ -101,12 +81,6 @@ Issues and pull requests are welcome at [<!-- repo title -->](<!-- link to repo 
 >Include your name and any links to your social media, contact info, or websites that you'd like. Don't forget to s/o your contributors here too!
 
 **[Meg Gutshall](https://github.com/meg-gutshall/)**
-
-See also the list of [contributors](#contributors) who participated in this project.
-
-## Contributors
-
->Add a list of contributors here. You may want to feature some who have really stood out.
 
 ## Acknowledgments
 
