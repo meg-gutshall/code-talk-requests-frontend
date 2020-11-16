@@ -62,12 +62,13 @@ Issues and pull requests are welcome at [this repository](https://github.com/meg
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- Anything else that seems useful
+- A **HUGE** thank you goes out to [David Liang](https://github.com/JizongL) who helped me debug a very mysterious JavaScript error
+- Another mention for [Sushi Chanrai](https://github.com/schanrai) for writing an excellent blog post titled ["Self-referential Class Variables in OOJS Applications"], which I used in my DOMElements class
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 [Code Talk Requests Frontend]: https://github.com/meg-gutshall/code-talk-requests-frontend
+
+["Self-referential Class Variables in OOJS Applications"]: https://schanrai.github.io/self-referential_class_variables_in_oojs_applications "Self-referential Class Variables in OOJS Applications"
