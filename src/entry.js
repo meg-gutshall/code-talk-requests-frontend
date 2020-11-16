@@ -45,25 +45,19 @@ function renderTopicRequests(REQS_URL) {
     };
     fetch(url, jwtGetFetchOptions)
       .then(resp => resp.json())
-      .then(topicRequests => topicRequests.data.forEach(topicRequest => {
-      const newTopicRequest = new TopicRequest({id: topicRequest.id, ...topicRequest.attributes});
+      .then(topicRequests => topicRequests.data.forEach(attrs => { new TopicRequest(attrs) }));
+  }
       if (newTopicRequest.codepanionId == parseInt(current_user)) {
         newTopicRequest.renderTopicRequests('user-row');
       } else {
         newTopicRequest.renderTopicRequests('all-other-row');
       }
-    }))
+    })
+    return allRequests;
   }
 
   fetchTopicRequests(REQS_URL);
 }
-
-// Sort function
-// .sort((a, b) => a.upvotes - b.upvotes)
-// sort(function(a, b) {
-//   return a.upvotes - b.upvotes;
-// })
-
 
 // Add 'New Topic Request' button
 function addNewTopicRequestButton() {

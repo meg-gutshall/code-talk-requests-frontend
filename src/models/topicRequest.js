@@ -1,10 +1,10 @@
 class TopicRequest {
-  constructor(attr) {
-    this.id = attr.id;
-    this.idea = attr.idea;
-    this.description = attr.description;
-    this.upvotes = attr.upvotes;
-    this.codepanionId = attr.codepanion_id;
+  constructor(data) {
+    this.id = data.id;
+    this.idea = data.attributes.idea;
+    this.description = data.attributes.description;
+    this.upvotes = data.attributes.upvotes;
+    this.codepanionId = data.attributes.codepanion_id;
     TopicRequest.all.push(this);
   }
 
