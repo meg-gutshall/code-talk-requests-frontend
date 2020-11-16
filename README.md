@@ -28,19 +28,6 @@ Like many developers, I have a love of learning and am intrigued by several tech
 - [Bootstrap 4](https://getbootstrap.com/), [FontAwesome](https://fontawesome.com/), and [Sass](https://sass-lang.com/) - The styling tools used
 - And don't forget good old HTML5 and CSS3! <3
 
-## Features
-
-What makes your project stand out? What pain points does it solve for the prospective user? Compare it to competitor apps/tools to show how it is different/better.
-
-## Example Code
-
-Show what your code does as concisely as possible. Users should be able to figure out **how** your project solves their problem by looking at the example.
-Also include the example code as a file in your repo (named `example.js` or in an `example` directory) so that users can run the code if they clone down the repository.
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
 ### Prerequisites
 
 List which technologies the user needs to install the software and how to install these dependencies.
