@@ -1,4 +1,4 @@
-import './assets/main.scss';
+import './assets/css/main.scss';
 import 'bootstrap/dist/js/bootstrap';
 import '@fortawesome/fontawesome-free/js/all.js';
 import DOMElements from './services/domElements';
