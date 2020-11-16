@@ -16,10 +16,6 @@ Like many developers, I have a love of learning and am intrigued by several tech
 4. Simply select the "New Topic Request" button, complete the "Topic Request Idea" and "Topic Request Description" fields, and click "Create" to see a new topic request card added to your list of requests.
 5. Select "Log Out" when finished.
 
-## Build Status and Code Style
-
->Build status of continuous integration (travis, appveyor, etc.) and code style (xo, standard etc.). This will help others who wish to contribute to your project. You can include badges here as well, just don't go too crazy or it looks like a mess.
-
 ## Table of Contents
 
 >Depending on how long the `README` is, add in a ToC or even abstract some sections away to different markdown files (i.e. `CONTRIBUTING.md`, `USAGE.md`, etc.).
