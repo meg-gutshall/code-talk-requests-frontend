@@ -71,10 +71,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Contributing
 
->Add more detailed instructions for open-source projects. It's a good idea to include a code of conduct as well as resource links as to where absolute beginners can go to learn how to contribute to open source. [Here's a great place to start.][Open Source Guides]
->I personally like the Contributor Covenant and use the below statement as my default. I intend to expand on it once I create an open-source project truly worthy of others' contributions.
-
-Issues and pull requests are welcome at [<!-- repo title -->](<!-- link to repo -->). This project as well as all other content on my GitHub are intended to be safe, welcoming, and open for collaboration. Users are expected to adhere to the [Contributor Covenant code of conduct](https://www.contributor-covenant.org/version/1/4/code-of-conduct) and those that do not will be reported and blocked. I got no time for that nonsense.
+Issues and pull requests are welcome at [this repository](https://github.com/meg-gutshall/code-talk-requests-frontend). This project as well as all other content on my GitHub are intended to be safe, welcoming, and open for collaboration. Users are expected to adhere to the [Contributor Covenant code of conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/) and those that do not will be reported and blocked. I got no time for that nonsense.
 
 ## Authors
 
