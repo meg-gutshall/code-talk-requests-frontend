@@ -45,14 +45,14 @@ function renderTopicRequests(REQS_URL) {
     };
     fetch(url, jwtGetFetchOptions)
       .then(resp => resp.json())
-      .then(topicRequests => topicRequests.data.forEach(attrs => { new TopicRequest(attrs) }));
-  }
-      if (newTopicRequest.codepanionId == parseInt(current_user)) {
-        newTopicRequest.renderTopicRequests('user-row');
-      } else {
-        newTopicRequest.renderTopicRequests('all-other-row');
-      }
-    })
+      .then(topicRequests => topicRequests.data.forEach(attrs => {
+        let newTopicRequest = new TopicRequest(attrs);
+        if (newTopicRequest.codepanionId == parseInt(current_user)) {
+          newTopicRequest.renderTopicRequests('user-row');
+        } else {
+          newTopicRequest.renderTopicRequests('all-other-row');
+        }
+      }));
     return allRequests;
   }
 
