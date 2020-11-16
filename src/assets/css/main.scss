@@ -1,7 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Open+Sans:wght@300;400;600;700;800&display=swap');
 @import 'variables';
 @import 'bootstrap/scss/bootstrap';
 
 // My custom styling here
+
+button {
+  filter: drop-shadow(-4px 4px 3px rgba(0, 0, 0, 0.3));
+}
+
+button::hover {
+  filter: drop-shadow(-4px 4px 3px rgba(0, 0, 0, 0.5));
+}
+
+p#footer-body {
+  color: $independence;
+}
 
 #user-row {
   background-color: $silver-pink;
@@ -12,6 +25,8 @@
 #user-row-header {
   background-color: $silver-pink;
   color: $white;
+  text-shadow: -4px 4px $old-lavender;
+  font-family: 'Courgette', cursive;
   font-size: 3rem;
   padding: 2rem 0;
 }
@@ -25,8 +40,34 @@
 #all-other-row-header {
   background-color: $old-lavender;
   color: $white;
+  text-shadow: -4px 4px $melon;
+  font-family: 'Courgette', cursive;
   font-size: 3rem;
   padding: 2rem 0;
+}
+
+.card {
+  border-color: $charcoal;
+  filter: drop-shadow(-7px 7px 5px rgba(0, 0, 0, 0.4));
+}
+
+.card-footer {
+  border-top: 1px solid $english-lavender;
+}
+
+#upvote-count {
+  font-weight: $font-weight-semi-bold;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: $font-weight-extra-bold;
+}
+
+.navbar-light .navbar-brand {
+  font-family: 'Courgette', cursive;
+  color: $independence;
+  text-shadow: -3px 3px $white;
 }
 
 .btn-secondary {
