@@ -1,10 +1,10 @@
 class TopicRequest {
-  constructor(topicRequest, topicRequestAttributes) {
-    this.id = topicRequest.id;
-    this.idea = topicRequestAttributes.idea;
-    this.description = topicRequestAttributes.description;
-    this.upvotes = topicRequestAttributes.upvotes;
-    this.codepanionId = topicRequestAttributes.codepanion_id;
+  constructor(attr) {
+    this.id = attr.id;
+    this.idea = attr.idea;
+    this.description = attr.description;
+    this.upvotes = attr.upvotes;
+    this.codepanionId = attr.codepanion_id;
     TopicRequest.all.push(this);
   }
 
@@ -35,12 +35,12 @@ class TopicRequest {
     return this.all.find((topicRequest) => topicRequest.id === id)
   }
 
-  static updateTopicRequest(updatedTopicRequest) {
-    const topicRequest = this.findTopicRequest(updatedTopicRequest.id);
-    topicRequest.idea = updatedTopicRequestAttributes.idea;
-    topicRequest.description = updatedTopicRequestAttributes.description;
-    topicRequest.upvotes = updatedTopicRequestAttributes.upvotes;
-    topicRequest.codepanionId = updatedTopicRequestAttributes.codepanion_id;
+  static updateTopicRequest(updatedAttr) {
+    const topicRequest = this.findTopicRequest(updatedAttr.id);
+    topicRequest.idea = updatedAttr.idea;
+    topicRequest.description = updatedAttr.description;
+    topicRequest.upvotes = updatedAttr.upvotes;
+    topicRequest.codepanionId = updatedAttr.codepanion_id;
     return topicRequest;
   }
 

@@ -46,7 +46,7 @@ function renderTopicRequests(REQS_URL) {
     const resp = await fetch(url, jwtGetFetchOptions);
     const topicRequests = await resp.json();
     let allRequests = await topicRequests.data.forEach(topicRequest => {
-      const newTopicRequest = new TopicRequest(topicRequest, topicRequest.attributes);
+      const newTopicRequest = new TopicRequest({id: topicRequest.id, ...topicRequest.attributes});
       if (newTopicRequest.codepanionId == parseInt(current_user)) {
         newTopicRequest.renderTopicRequests('user-row');
       } else {
