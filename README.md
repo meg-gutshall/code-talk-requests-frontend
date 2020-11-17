@@ -8,18 +8,9 @@ This repository is the companion to [the backend repo][Code Talk Requests Backen
 
 [![Demo video](https://img.youtube.com/vi/z1_PU_QzOJI/0.jpg)](https://youtu.be/z1_PU_QzOJI)
 
-## Built With
-
-- Language: [JavaScript]
-- Build Tool: [Webpack] - More specifically, a static module bundler
-- Package Management System: [npm]
-- Precompiler: [Sass]
-- CSS Framework: [Bootstrap 4]
-- And don't forget good old HTML5 and CSS3! <3
-
 ## Web App Installation
 
-If you have all the requisite technologies for the [frontend](#built-with) and [backend][Code Talk Requests Backend -- Built With] already installed, you can follow the directions below. If not, you may want to skip down to the [Technology Installation](#technology-installation) section and then come back.
+If you have all the requisite technologies for the [frontend](#built-with) and [backend][Code Talk Requests Backend -- Built With] already installed, you can follow the directions below. If not, you may want to skip down to the [Technology Installation](#technology-installation) section of each repo and then come back.
 
 **This following includes installation and usage instructions for both frontend and backend repos.**
 
@@ -34,6 +25,15 @@ Like many developers, I have a love of learning and am intrigued by several tech
 3. Each topic request is displayed in a card inside either the current user's (your) section at the top or all other users' section at the bottom.
 4. Simply select the "New Topic Request" button, complete the "Topic Request Idea" and "Topic Request Description" fields, and click "Create" to see a new topic request card added to your list of requests.
 5. Select "Log Out" when finished.
+
+## Built With
+
+- Language: [JavaScript]
+- Build Tool: [Webpack] - More specifically, a static module bundler
+- Package Management System: [npm]
+- Precompiler: [Sass]
+- CSS Framework: [Bootstrap 4]
+- And don't forget good old HTML5 and CSS3! <3
 
 ### Technology Installation
 
