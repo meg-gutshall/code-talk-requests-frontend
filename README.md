@@ -10,10 +10,11 @@ This repository is the companion to [the backend repo][Code Talk Requests Backen
 
 ## Built With
 
-- [JavaScript] - The programming language used
-- [Webpack] - The static module bundle used for the JavaScript code
-- [npm] - The package management system used
-- [Bootstrap 4], [FontAwesome], and [Sass] - The styling tools used
+- Language: [JavaScript]
+- Build Tool: [Webpack] - More specifically, a static module bundler
+- Package Management System: [npm]
+- Precompiler: [Sass]
+- CSS Framework: [Bootstrap 4]
 - And don't forget good old HTML5 and CSS3! <3
 
 ### Installation
