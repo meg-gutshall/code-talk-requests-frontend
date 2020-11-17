@@ -17,13 +17,15 @@ This repository is the companion to [the backend repo][Code Talk Requests Backen
 - CSS Framework: [Bootstrap 4]
 - And don't forget good old HTML5 and CSS3! <3
 
-### Installation
+## Web App Installation
 
-This section tells the user how to get a local environment running. Be sure to include specific step-by-step instructions for the installation process to accommodate coders of all levels.
-This section will vary greatly depending on the type of code the repository contains. For example, a Node package is usually installed by typing `npm install <package-name>` in the terminal, whereas other projects you may have to fork and clone down the repository. In both cases the user needs to have the requisite technology installed to run to code. Even with a Docker image, the user still needs to be able to run Docker on their machine.
-Keep this in mind when writing out the "Prerequisites" and "Installation" sections.
+If you have all the requisite technologies for the [frontend](#built-with) and [backend][Code Talk Requests Backend -- Built With] already installed, you can follow the directions below. If not, you may want to skip down to the [Technology Installation](#technology-installation) section and then come back.
 
-## Usage
+**This following includes installation and usage instructions for both frontend and backend repos.**
+
+Fork [this repository][Code Talk Requests Frontend] as well as [the backend repository][Code Talk Requests Backend] from GitHub and clone your forked copies down to your computer. Open two new terminal windows and `cd` into the root of each directory.
+
+### Usage
 
 Like many developers, I have a love of learning and am intrigued by several tech-related topics (in fact, I have a list of topics just waiting until I finish the curriculum for me to start in on). When I resurrect the Code Talks, I'd like to know what kind of sessions and topics the attendees are interested in learning about. I have many plans for this platform in the future, but for right now it has the following capabilities:
 
@@ -33,7 +35,7 @@ Like many developers, I have a love of learning and am intrigued by several tech
 4. Simply select the "New Topic Request" button, complete the "Topic Request Idea" and "Topic Request Description" fields, and click "Create" to see a new topic request card added to your list of requests.
 5. Select "Log Out" when finished.
 
-### Prerequisites
+### Technology Installation
 
 List which technologies the user needs to install the software and how to install these dependencies.
 
@@ -72,6 +74,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 [Code Talk Requests Frontend]: https://github.com/meg-gutshall/code-talk-requests-frontend
 [Code Talk Requests Backend]: https://github.com/meg-gutshall/code-talk-requests-backend
+[Code Talk Requests Backend -- Built With]: https://github.com/meg-gutshall/code-talk-requests-backend#built-with
 
 [JavaScript]: https://javascript.info/
 [Webpack]: https://webpack.js.org/
