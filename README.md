@@ -16,6 +16,16 @@ If you have all the requisite technologies for the [frontend](#built-with) and [
 
 Fork [this repository][Code Talk Requests Frontend] as well as [the backend repository][Code Talk Requests Backend] from GitHub and clone your forked copies down to your computer. Open two new terminal windows and `cd` into the root of each directory.
 
+- Run `bundle install`
+  - `rbenv` automatically know which ruby version because of the `.ruby-version` file
+- Create `.env` file --> see other `README`
+- Configure Postgres --> see other `README` for approximate steps
+- Create database, run migrations, and seed database
+- Start rails server
+- Run `npm install`
+- Run `npm start`
+- Navigate to `http://localhost:8080`
+
 ### Usage
 
 Like many developers, I have a love of learning and am intrigued by several tech-related topics (in fact, I have a list of topics just waiting until I finish the curriculum for me to start in on). When I resurrect the Code Talks, I'd like to know what kind of sessions and topics the attendees are interested in learning about. I have many plans for this platform in the future, but for right now it has the following capabilities:
