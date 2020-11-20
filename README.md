@@ -12,7 +12,7 @@ This repository is the companion to [the backend repo][Code Talk Requests Backen
 
 If you have all the requisite technologies for the [frontend](#built-with) and [backend][Code Talk Requests Backend -- Built With] already installed, you can follow the directions below. If not, you may want to skip down to the [Technology Installation](#technology-installation) section of each repo and then come back.
 
-**This following includes installation and usage instructions for both frontend and backend repos.**
+**The following includes installation and usage instructions for both frontend and backend repos.**
 
 Fork [this repository][Code Talk Requests Frontend] as well as [the backend repository][Code Talk Requests Backend] from GitHub and clone your forked copies down to your computer. Open two new terminal windows and `cd` into the root of each directory.
 
@@ -22,9 +22,7 @@ Fork [this repository][Code Talk Requests Frontend] as well as [the backend repo
 - Run `npm start`
 - Navigate to `http://localhost:8080`
 
-<!-- ! Start copied over from backend -->
-
-### Step 1: Create an `.env` file
+### Step 1: Create a `.env` file
 
 From your backend's terminal type `touch .env` and input the following text into the newly created file:
 
@@ -46,19 +44,21 @@ If you've install `rbenv`, you don't need to worry about Ruby versioning. `rbenv
 
 If you don't have `rbenv` installed, just open the `.ruby-version` file to read which version you need.
 
-### Step 3: Set up database
+### Step 3: Set up the database
 
-Start up the PostgreSQL server and type `rails db:setup` into the terminal. This allows PostgreSQL to create two new databases (development and test) using the `.env` file you just created (in addition to pre-existing configurations). Next, type `rails db:migrate`. This step runs the table migrations in the app, which gives the database instructions on what kind of data it should look to receive and to which models and attributes the data corresponds.
+Start up the PostgreSQL server and, again from the backend's terminal, type `rails db:setup`. This allows PostgreSQL to create two new databases (development and test) using the `.env` file you just created and other coded configurations. Next, type `rails db:migrate`. This step runs the table migrations in the app, which gives the database instructions on what kind of data it should look to receive and to which models and attributes the data corresponds.
 
 ### Step 4: Start up the app
 
 #### Backend
 
-To start up the Rails server, which is in charge of sending your data to the web, type `rails s` in the terminal.
+To start up the Rails server, which is in charge of sending your data to the web, type `rails s` in the backend's terminal.
 
 #### Frontend
 
-Now in your frontend's terminal, type `npm install` and then `npm start`. You should now be able to open up a new browser window and navigate to [http://localhost:8080/](http://localhost:8080/) to see the Code Talks login page displayed. From there, log in using the seed data provided and have fun!
+Now in the frontend's terminal, type `npm install`. You may see some warnings display in your frontend's terminal requiring package fixes or updates. Follow the instructions given to fix any issues before moving forward.
+
+To render the frontend code, enter `npm start` into the frontend's terminal. You should now be able to open up a new browser window and navigate to [http://localhost:8080/](http://localhost:8080/) to see the Code Talks login page displayed. From there, log in using the seed data provided and have fun!
 
 <!-- Seed data login credentials -->
 If you'd like to explore Code Talks with data preloaded into the database, type `rails db:seed` in the backend's terminal and log in using the following credentials:
@@ -72,8 +72,6 @@ password: 123
 ```
 
 When you're done, just type `Ctrl + C` in the terminal to stop your Rails session and remember to also shut down your PostgreSQL server. If you'd like to reset the database to delete any objects you've created and start over fresh, type `rails db:reset` into the terminal.
-
-<!-- ! End copied over from backend -->
 
 ### Usage
 
