@@ -60,16 +60,20 @@ Now in the frontend's terminal, type `npm install`. You may see some warnings di
 
 To render the frontend code, enter `npm start` into the frontend's terminal. You should now be able to open up a new browser window and navigate to [http://localhost:8080/](http://localhost:8080/) to see the Code Talks login page displayed. From there, log in using the seed data provided and have fun!
 
-<!-- Seed data login credentials -->
-If you'd like to explore Code Talks with data preloaded into the database, type `rails db:seed` in the backend's terminal and log in using the following credentials:
+<details>
+  <summary><strong>Seed Data</strong></summary>
 
-```bash
-email_address: "steven@e.com"
-password: 123
+  If you'd like to explore Code Talks with data preloaded into the database, type `rails db:seed` in the backend's terminal and log in using the following credentials:
 
-email_address: "ashley@e.com"
-password: 123
-```
+  ```bash
+  email_address: "steven@e.com"
+  password: 123
+
+  email_address: "ashley@e.com"
+  password: 123
+  ```
+
+</details>
 
 When you're done, just type `Ctrl + C` in the terminal to stop your Rails session and remember to also shut down your PostgreSQL server. If you'd like to reset the database to delete any objects you've created and start over fresh, type `rails db:reset` into the terminal.
 
