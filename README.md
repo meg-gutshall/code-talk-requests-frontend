@@ -16,15 +16,60 @@ If you have all the requisite technologies for the [frontend](#built-with) and [
 
 Fork [this repository][Code Talk Requests Frontend] as well as [the backend repository][Code Talk Requests Backend] from GitHub and clone your forked copies down to your computer. Open two new terminal windows and `cd` into the root of each directory.
 
-- Run `bundle install`
-  - `rbenv` automatically know which ruby version because of the `.ruby-version` file
-- Create `.env` file --> see other `README`
-- Configure Postgres --> see other `README` for approximate steps
 - Create database, run migrations, and seed database
 - Start rails server
 - Run `npm install`
 - Run `npm start`
 - Navigate to `http://localhost:8080`
+
+<!-- ! Start copied over from backend -->
+
+### Step 1: Create an `.env` file
+
+From your backend's terminal type `touch .env` and input the following text into the newly created file:
+
+```bash
+POSTGRES_USER=[YOUR_USERNAME]
+POSTGRES_PASSWORD=[YOUR_PASSWORD]
+POSTGRES_HOST='localhost'
+POSTGRES_DB='code-talk-requests-backend'
+POSTGRES_TEST_DB='code-talk-requests-backend_test'
+```
+
+`[YOUR_USERNAME]` and `[YOUR_PASSWORD]` in the above code block are the credentials you set when you installed PostgreSQL.
+
+### Step 2: Run `bundle install`
+
+Run `bundle install` in your backend's terminal. This command uses Bundler to install the gems listed `Gemfile`.
+
+If you've install `rbenv`, you don't need to worry about Ruby versioning. `rbenv` reads the `.ruby-version` file and automatically sets the local environment to the correct Ruby version.
+
+If you don't have `rbenv` installed, just open the `.ruby-version` file to read which version you need.
+
+### Step 3: Set up database
+
+Start up the PostgreSQL server and type `rails db:setup` into the terminal. This allows PostgreSQL to create two new databases (development and test) using the `.env` file you just created (in addition to pre-existing configurations). Next, type `rails db:migrate`. This step runs the table migrations in the app, which gives the database instructions on what kind of data it should look to receive and to which models and attributes the data corresponds.
+
+### Step 4: Start up the app
+
+#### Backend
+
+To start up the Rails server, which is in charge of sending your data to the web, type `rails s` in the terminal.
+
+#### Frontend
+
+Now in your frontend's terminal, type `npm install` and then `npm start`. You should now be able to open up a new browser window and navigate to [http://localhost:8080/](http://localhost:8080/) to see the Code Talks login page displayed. From there, log in using the seed data provided and have fun!
+
+<!-- Seed data login credentials -->
+If you'd like to explore [App Name] with data preloaded into the database, type `rails db:seed` in the terminal and log in using the following credentials:
+
+```bash
+[credentials here]
+```
+
+When you're done, just type `Ctrl + C` in the terminal to stop your Rails session and remember to also shut down your PostgreSQL server. If you'd like to reset the database to delete any objects you've created and start over fresh, type `rails db:reset` into the terminal.
+
+<!-- ! End copied over from backend -->
 
 ### Usage
 
