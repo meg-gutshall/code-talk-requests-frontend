@@ -2,6 +2,20 @@
 
 This web app is designed to be used within a community of learning developers to create study group topic requests. Each topic request consists of a brief idea (similar to a git commit message) and an optional longer description that elaborates on that idea. Once submitted, the request is then rendered as a card on a dashboard available for other learners in the community to view and upvote. As the topic requests' upvote count increases, it rises in the ranks of popularity and becomes a more likely candidate to be converted into a study session by the community's instructors.
 
+1. [Demo](#demo)
+2. [Web App Installation](#web-app-installation)
+    1. [Step 1: Create a `.env` file](#step-1-create-a-env-file)
+    2. [Step 2: Run `bundle install`](#step-2-run-bundle-install)
+    3. [Step 3: Set up the database](#step-3-set-up-the-database)
+    4. [Step 4: Start up the app](#step-4-start-up-the-app)
+3. [Usage](#usage)
+4. [Built With](#built-with)
+5. [The Why](#the-why)
+4. [Contributing](#contributing)
+5. [Author](#author)
+6. [Acknowledgements](#acknowledgements)
+7. [License](#license)
+
 This repository is the companion to [the backend repo][Code Talk Requests Backend]. If you're not familiar with Ruby on Rails, I highly recommend that you go check out that `README` as well for technology installation instructions.
 
 ## Demo
