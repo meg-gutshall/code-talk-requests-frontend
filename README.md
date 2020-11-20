@@ -2,7 +2,7 @@
 
 This web app is designed to be used within a community of learning developers to create study group topic requests. Each topic request consists of a brief idea (similar to a git commit message) and an optional longer description that elaborates on that idea. Once submitted, the request is then rendered as a card on a dashboard available for other learners in the community to view and upvote. As the topic requests' upvote count increases, it rises in the ranks of popularity and becomes a more likely candidate to be converted into a study session by the community's instructors.
 
-This repository is the companion to [the backend repo][Code Talk Requests Backend]. If you're not familiar with Ruby on Rails, I highly recommend that you go check out that `README` as well for usage and installation instructions.
+This repository is the companion to [the backend repo][Code Talk Requests Backend]. If you're not familiar with Ruby on Rails, I highly recommend that you go check out that `README` as well for technology installation instructions.
 
 ## Demo
 
