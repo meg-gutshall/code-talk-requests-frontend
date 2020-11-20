@@ -114,9 +114,11 @@ Being the hard worker that Sherry is, she was hired and left the program. I had 
 
 Issues and pull requests are welcome at [this repository][Code Talk Requests Frontend]. This project as well as all other content on my GitHub are intended to be safe, welcoming, and open for collaboration. Users are expected to adhere to the [Contributor Covenant code of conduct] and those that do not will be reported and blocked. I got no time for that nonsense.
 
-## Authors
+## Author
 
 **[Meg Gutshall]**
+
+Connect with me on... [GitHub], [LinkedIn], [Twitter], and [DEV]!
 
 ## Acknowledgments
 
@@ -143,6 +145,10 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ["Self-referential Class Variables in OOJS Applications"]: https://schanrai.github.io/self-referential_class_variables_in_oojs_applications "Self-referential Class Variables in OOJS Applications"
 
 [Meg Gutshall]: https://meghangutshall.com/ "Meg Gutshall's website"
+[GitHub]: https://github.com/meg-gutshall "Meg Gutshall's GitHub profile"
+[LinkedIn]: https://www.linkedin.com/in/meghan-gutshall/ "Meg Gutshall's LinkedIn profile"
+[Twitter]: https://twitter.com/meg_gutshall "Meg Gutshall's Twitter profile"
+[DEV]: https://dev.to/meg_gutshall "Meg Gutshall's DEV profile"
 [Sherry Martin]: https://www.linkedin.com/in/fullstackdevelopercville/ "Sherry Martin's LinkedIn profile"
 [David Liang]: https://github.com/JizongL "David Liang's GitHub profile"
 [Sushi Chanrai]: https://github.com/schanrai "Sushi Chanrai's GitHub profile"
