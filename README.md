@@ -10,17 +10,11 @@ This repository is the companion to [the backend repo][Code Talk Requests Backen
 
 ## Web App Installation
 
-If you have all the requisite technologies for the [frontend](#built-with) and [backend][Code Talk Requests Backend -- Built With] already installed, you can follow the directions below. If not, you may want to skip down to the [Technology Installation](#technology-installation) section of each repo and then come back.
+If you have all the requisite technologies for the [backend][Code Talk Requests Backend -- Built With] already installed, you can follow the directions below. If not, you may want to skip down to the [Technology Prerequisites][Code Talk Requests Backend -- Technology Prerequisites] section of the backend repo and then come back.
 
 **The following includes installation and usage instructions for both frontend and backend repos.**
 
 Fork [this repository][Code Talk Requests Frontend] as well as [the backend repository][Code Talk Requests Backend] from GitHub and clone your forked copies down to your computer. Open two new terminal windows and `cd` into the root of each directory.
-
-- Create database, run migrations, and seed database
-- Start rails server
-- Run `npm install`
-- Run `npm start`
-- Navigate to `http://localhost:8080`
 
 ### Step 1: Create a `.env` file
 
@@ -96,20 +90,6 @@ Like many developers, I have a love of learning and am intrigued by several tech
 - CSS Framework: [Bootstrap 4]
 - And don't forget good old HTML5 and CSS3! <3
 
-### Technology Installation
-
-List which technologies the user needs to install the software and how to install these dependencies.
-
-#### <Software Name>
-
-Links to resources and installation instructions. Include code examples. Break instructions down by operating system if necessary.
-
-<!-- ##### For Mac Users -->
-
-<!-- ##### For Windows Users -->
-
-<!-- ##### For Linux Users -->
-
 ## The Why
 
 Back in the fall of 2018, one of my Flatiron School classmates, [Sherry Martin], and I started hosting study sessions which we called Code Talks. We asked students to present code that they had worked on, like a project or a lab, or we would help our classmates troubleshoot an issue they were facing. We also invited guests to speak on various tech-related topics and hosted sessions in which we broke into small groups to solve code challenges. The ultimate purpose of these talks was to help ourselves and our classmates become more comfortable speaking in technical terms about their code—especially since many of us were at the very beginning of our code journeys.
@@ -127,7 +107,7 @@ Issues and pull requests are welcome at [this repository][Code Talk Requests Fro
 ## Acknowledgments
 
 - A **HUGE** thank you goes out to [David Liang] who helped me debug a very mysterious JavaScript error
-- Another mention for [Sushi Chanrai] for writing an excellent blog post titled ["Self-referential Class Variables in OOJS Applications"], which I used in my DOMElements class
+- Another mention for [Sushi Chanrai] for writing an excellent blog post titled ["Self-referential Class Variables in OOJS Applications"], which I used in my `DOMElements` class
 
 ## License
 
@@ -136,6 +116,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 [Code Talk Requests Frontend]: https://github.com/meg-gutshall/code-talk-requests-frontend
 [Code Talk Requests Backend]: https://github.com/meg-gutshall/code-talk-requests-backend
 [Code Talk Requests Backend -- Built With]: https://github.com/meg-gutshall/code-talk-requests-backend#built-with
+[Code Talk Requests Backend -- Technology Prerequisites]: https://github.com/meg-gutshall/code-talk-requests-backend#technology-prerequisites
 
 [JavaScript]: https://javascript.info/
 [Webpack]: https://webpack.js.org/
