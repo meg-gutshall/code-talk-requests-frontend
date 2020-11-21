@@ -20,6 +20,7 @@ async function autoRedirect() {
     renderTopicRequests(REQS_URL);
     addNewTopicRequestButton();
     renderLogoutButton();
+    // addUpvoteButtonListener();
   } else {
     showLoginForm();
   }
@@ -49,11 +50,12 @@ function renderTopicRequests(REQS_URL) {
         let newTopicRequest = new TopicRequest(attrs);
         if (newTopicRequest.codepanionId == parseInt(current_user)) {
           newTopicRequest.renderTopicRequests('user-row');
+          addUpvoteButtonListener();
         } else {
           newTopicRequest.renderTopicRequests('all-other-row');
+          addUpvoteButtonListener();
         }
       }));
-    return allRequests;
   }
 
   fetchTopicRequests(REQS_URL);
@@ -101,10 +103,30 @@ function addNewTopicRequestButton() {
       .then( postedTopicRequest => {
         const newTopicRequest = new TopicRequest(postedTopicRequest.topic_request.data, postedTopicRequest.topic_request.data.attributes);
         newTopicRequest.renderTopicRequests('user-row');
+        addUpvoteButtonListener();
       })
   }
 
   renderNewTopicRequestButton();
+}
+
+// Add upvote functionality
+
+// PSEUDOCODE:
+// Get all upvote buttons
+// Attach event listeners to upvote buttons
+// Handle onclick events
+
+function addUpvoteButtonListener() {
+  const cards = document.querySelectorAll('.card');
+  cards.forEach(card => {
+    console.log("addUpvoteButtonListener -> card", card)
+    const upvoteButton = 
+    card.querySelector('.upvote-button').addEventListener('click', (e) => {
+      console.log("upvote -> e.target", e.target);
+      addUpvote(e.target);
+    })
+  })
 }
 
 export { LOGIN_URL, autoRedirect };
