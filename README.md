@@ -13,7 +13,7 @@ This web app is designed to be used within a community of learning developers to
 5. [The Why](#the-why)
 6. [Contributing](#contributing)
 7. [Author](#author)
-8. [Acknowledgements](#acknowledgements)
+8. [Acknowledgments](#acknowledgments)
 9. [License](#license)
 
 This repository is the companion to [the backend repo][Code Talk Requests Backend]. If you're not familiar with Ruby on Rails, I highly recommend that you go check out that `README` as well for technology installation instructions.
