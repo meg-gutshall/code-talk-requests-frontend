@@ -1,0 +1,418 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "topic_request",
+      "attributes": {
+        "idea": "GitHub",
+        "description": "How to connect your local repo to your GitHub repo",
+        "upvotes": 4,
+        "codepanion_id": 5
+      },
+      "relationships": {
+        "codepanion": {
+          "data": {
+            "id": "5",
+            "type": "user"
+          }
+        }
+      }
+    },
+    {
+      "id": "2",
+      "type": "topic_request",
+      "attributes": {
+        "idea": "SQL",
+        "description": "Useful SQL commands",
+        "upvotes": 2,
+        "codepanion_id": 2
+      },
+      "relationships": {
+        "codepanion": {
+          "data": {
+            "id": "2",
+            "type": "user"
+          }
+        }
+      }
+    },
+    {
+      "id": "3",
+      "type": "topic_request",
+      "attributes": {
+        "idea": "Metaprogramming in Ruby",
+        "description": "Creating new utility classes and methods",
+        "upvotes": 6,
+        "codepanion_id": 7
+      },
+      "relationships": {
+        "codepanion": {
+          "data": {
+            "id": "7",
+            "type": "user"
+          }
+        }
+      }
+    },
+    {
+      "id": "4",
+      "type": "topic_request",
+      "attributes": {
+        "idea": "Webpacker in Rails",
+        "description": "How do you use it? What's it even for?",
+        "upvotes": 1,
+        "codepanion_id": 7
+      },
+      "relationships": {
+        "codepanion": {
+          "data": {
+            "id": "7",
+            "type": "user"
+          }
+        }
+      }
+    },
+    {
+      "id": "5",
+      "type": "topic_request",
+      "attributes": {
+        "idea": "Bootstrap",
+        "description": "A basic introduction to how to use Bootstrap and implement it in a project",
+        "upvotes": 1,
+        "codepanion_id": 7
+      },
+      "relationships": {
+        "codepanion": {
+          "data": {
+            "id": "7",
+            "type": "user"
+          }
+        }
+      }
+    },
+    {
+      "id": "6",
+      "type": "topic_request",
+      "attributes": {
+        "idea": "Project Hosting",
+        "description": "The different platforms you can use to host your projects (i.e. Heroku, Netlify, GitHub Pages, etc.)",
+        "upvotes": 1,
+        "codepanion_id": 7
+      },
+      "relationships": {
+        "codepanion": {
+          "data": {
+            "id": "7",
+            "type": "user"
+          }
+        }
+      }
+    },
+    {
+      "id": "7",
+      "type": "topic_request",
+      "attributes": {
+        "idea": "JavaScript Plugins",
+        "description": "How to implement third-party JS plugins in your projects",
+        "upvotes": 2,
+        "codepanion_id": 4
+      },
+      "relationships": {
+        "codepanion": {
+          "data": {
+            "id": "4",
+            "type": "user"
+          }
+        }
+      }
+    },
+    {
+      "id": "8",
+      "type": "topic_request",
+      "attributes": {
+        "idea": "CSS",
+        "description": "A basic overview of CSS concepts like grid and flexbox",
+        "upvotes": 5,
+        "codepanion_id": 4
+      },
+      "relationships": {
+        "codepanion": {
+          "data": {
+            "id": "4",
+            "type": "user"
+          }
+        }
+      }
+    },
+    {
+      "id": "9",
+      "type": "topic_request",
+      "attributes": {
+        "idea": "Fetch",
+        "description": "Using fetch in JavaScript",
+        "upvotes": 2,
+        "codepanion_id": 4
+      },
+      "relationships": {
+        "codepanion": {
+          "data": {
+            "id": "4",
+            "type": "user"
+          }
+        }
+      }
+    },
+    {
+      "id": "10",
+      "type": "topic_request",
+      "attributes": {
+        "idea": "Async/Await",
+        "description": "How and when to use the async and await keywords in JavaScript",
+        "upvotes": 5,
+        "codepanion_id": 4
+      },
+      "relationships": {
+        "codepanion": {
+          "data": {
+            "id": "4",
+            "type": "user"
+          }
+        }
+      }
+    },
+    {
+      "id": "11",
+      "type": "topic_request",
+      "attributes": {
+        "idea": "ActiveRecord Queries",
+        "description": "How to create ActiveRecord queries and how it differs from SQL",
+        "upvotes": 5,
+        "codepanion_id": 4
+      },
+      "relationships": {
+        "codepanion": {
+          "data": {
+            "id": "4",
+            "type": "user"
+          }
+        }
+      }
+    },
+    {
+      "id": "12",
+      "type": "topic_request",
+      "attributes": {
+        "idea": "Blogging",
+        "description": "A brainstorm session for our Flatiron blog topics",
+        "upvotes": 4,
+        "codepanion_id": 4
+      },
+      "relationships": {
+        "codepanion": {
+          "data": {
+            "id": "4",
+            "type": "user"
+          }
+        }
+      }
+    },
+    {
+      "id": "13",
+      "type": "topic_request",
+      "attributes": {
+        "idea": "Project Collaboration",
+        "description": "Who wants to collaborate on a side project?",
+        "upvotes": 5,
+        "codepanion_id": 3
+      },
+      "relationships": {
+        "codepanion": {
+          "data": {
+            "id": "3",
+            "type": "user"
+          }
+        }
+      }
+    },
+    {
+      "id": "14",
+      "type": "topic_request",
+      "attributes": {
+        "idea": "Python",
+        "description": "Learning the basics of Python",
+        "upvotes": 6,
+        "codepanion_id": 3
+      },
+      "relationships": {
+        "codepanion": {
+          "data": {
+            "id": "3",
+            "type": "user"
+          }
+        }
+      }
+    },
+    {
+      "id": "15",
+      "type": "topic_request",
+      "attributes": {
+        "idea": "Web Hosting",
+        "description": "The best ways to host your portfolio site",
+        "upvotes": 6,
+        "codepanion_id": 3
+      },
+      "relationships": {
+        "codepanion": {
+          "data": {
+            "id": "3",
+            "type": "user"
+          }
+        }
+      }
+    },
+    {
+      "id": "16",
+      "type": "topic_request",
+      "attributes": {
+        "idea": "Algorithms",
+        "description": "Review common algorithms and complete related challenges",
+        "upvotes": 3,
+        "codepanion_id": 6
+      },
+      "relationships": {
+        "codepanion": {
+          "data": {
+            "id": "6",
+            "type": "user"
+          }
+        }
+      }
+    },
+    {
+      "id": "17",
+      "type": "topic_request",
+      "attributes": {
+        "idea": "React Native",
+        "description": "Learn how to build mobile applications using React",
+        "upvotes": 0,
+        "codepanion_id": 6
+      },
+      "relationships": {
+        "codepanion": {
+          "data": {
+            "id": "6",
+            "type": "user"
+          }
+        }
+      }
+    },
+    {
+      "id": "18",
+      "type": "topic_request",
+      "attributes": {
+        "idea": "Jekyll",
+        "description": "How to use Jekyll to build a static site on GitHub Pages",
+        "upvotes": 6,
+        "codepanion_id": 6
+      },
+      "relationships": {
+        "codepanion": {
+          "data": {
+            "id": "6",
+            "type": "user"
+          }
+        }
+      }
+    },
+    {
+      "id": "19",
+      "type": "topic_request",
+      "attributes": {
+        "idea": "Kotlin",
+        "description": "Basic Kotlin to help with building mobile apps",
+        "upvotes": 1,
+        "codepanion_id": 6
+      },
+      "relationships": {
+        "codepanion": {
+          "data": {
+            "id": "6",
+            "type": "user"
+          }
+        }
+      }
+    },
+    {
+      "id": "20",
+      "type": "topic_request",
+      "attributes": {
+        "idea": "React State",
+        "description": "Explain state in React and what it does exactly",
+        "upvotes": 4,
+        "codepanion_id": 1
+      },
+      "relationships": {
+        "codepanion": {
+          "data": {
+            "id": "1",
+            "type": "user"
+          }
+        }
+      }
+    },
+    {
+      "id": "21",
+      "type": "topic_request",
+      "attributes": {
+        "idea": "Redux vs. React Hooks",
+        "description": "Do we need Redux if we use React Hooks?",
+        "upvotes": 2,
+        "codepanion_id": 1
+      },
+      "relationships": {
+        "codepanion": {
+          "data": {
+            "id": "1",
+            "type": "user"
+          }
+        }
+      }
+    },
+    {
+      "id": "22",
+      "type": "topic_request",
+      "attributes": {
+        "idea": "Interview Prep",
+        "description": "How to prep for interviews—both behavioral and technical",
+        "upvotes": 0,
+        "codepanion_id": 1
+      },
+      "relationships": {
+        "codepanion": {
+          "data": {
+            "id": "1",
+            "type": "user"
+          }
+        }
+      }
+    },
+    {
+      "id": "23",
+      "type": "topic_request",
+      "attributes": {
+        "idea": "Mock Assessment",
+        "description": "Let's do mock project assessments",
+        "upvotes": 6,
+        "codepanion_id": 1
+      },
+      "relationships": {
+        "codepanion": {
+          "data": {
+            "id": "1",
+            "type": "user"
+          }
+        }
+      }
+    }
+  ]
+}
