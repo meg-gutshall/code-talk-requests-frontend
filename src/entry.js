@@ -53,7 +53,6 @@ function renderTopicRequests(REQS_URL) {
           newTopicRequest.renderTopicRequests('all-other-row');
         }
       }));
-    return allRequests;
   }
 
   fetchTopicRequests(REQS_URL);
