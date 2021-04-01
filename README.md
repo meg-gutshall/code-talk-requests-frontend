@@ -1,6 +1,6 @@
 # Code Talks Topic Request Platform
 
-This web app is designed to be used within a community of learning developers to create study group topic requests. Each topic request consists of a brief idea (similar to a git commit message) and an optional longer description that elaborates on that idea. Once submitted, the request is then rendered as a card on a dashboard available for other learners in the community to view and upvote. As the topic requests' upvote count increases, it rises in the ranks of popularity and becomes a more likely candidate to be converted into a study session by the community's instructors.
+This web app is designed to be used within a community of developers to create study group topic requests. Each topic request consists of a brief idea (similar to a git commit message) and an optional longer description that elaborates on that idea. Once submitted, the request is then rendered as a card on a dashboard available for other developers in the community to view and upvote. As the topic requests' upvote count increases, it rises in the ranks of popularity and becomes a more likely candidate to be converted into a study session.
 
 1. [Demo](#demo)
 2. [Web App Installation](#web-app-installation)
@@ -10,7 +10,7 @@ This web app is designed to be used within a community of learning developers to
     4. [Start up the app](#step-4-start-up-the-app)
 3. [Usage](#usage)
 4. [Built With](#built-with)
-5. [The Why](#the-why)
+5. [The Story](#the-story)
 6. [Contributing](#contributing)
 7. [Author](#author)
 8. [Acknowledgments](#acknowledgments)
@@ -104,7 +104,7 @@ Like many developers, I have a love of learning and am intrigued by several tech
 - CSS Framework: [Bootstrap 4]
 - And don't forget good old HTML5 and CSS3! <3
 
-## The Why
+## The Story
 
 Back in the fall of 2018, one of my Flatiron School classmates, [Sherry Martin], and I started hosting study sessions which we called Code Talks. We asked students to present code that they had worked on, like a project or a lab, or we would help our classmates troubleshoot an issue they were facing. We also invited guests to speak on various tech-related topics and hosted sessions in which we broke into small groups to solve code challenges. The ultimate purpose of these talks was to help ourselves and our classmates become more comfortable speaking in technical terms about their code—especially since many of us were at the very beginning of our code journeys.
 
