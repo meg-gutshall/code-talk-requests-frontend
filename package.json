@@ -36,7 +36,7 @@
     "dotenv-webpack": "^4.0.0",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "node-forge": ">=0.10.0",
     "node-sass": "^4.14.1",
     "resolve-url-loader": "^3.1.2",
