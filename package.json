@@ -38,7 +38,6 @@
     "html-webpack-plugin": "^4.5.2",
     "lodash": "^4.17.21",
     "node-forge": ">=0.10.0",
-    "node-sass": "^4.14.1",
     "postcss": "^8.2.15",
     "resolve-url-loader": "^4.0.0-alpha.3",
     "sass": "^1.32.12",
